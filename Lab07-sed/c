@@ -1,0 +1,9 @@
+# Extract IP addresses and MAC addresses from DHCP lease file
+
+# Match a range of lines within each lease block
+/^lease ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+) {/,/^}/ {
+  # Match the line containing the MAC address and extract the IP address
+  /hardware ethernet ([0-9a-fA-F:]+);/ {
+    s/lease ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+) {\n.*hardware ethernet ([0-9a-fA-F:]+);/\1 \2/p
+  }
+}

@@ -1,0 +1,55 @@
+lease 158.108.30.64 {
+  starts 4 2016/11/17 01:14:59;
+  ends 4 2016/11/17 01:14:59;
+  tstp 4 2016/11/17 01:59:59;
+  tsfp 4 2016/11/17 01:59:59;
+  atsfp 4 2016/11/17 01:59:59;
+  cltt 4 2016/11/17 01:14:59;
+  binding state free;
+  client-hostname "vxTarget";
+}
+lease 158.108.30.194 {
+  starts 4 2016/11/17 01:14:59;
+  ends 4 2016/11/17 01:14:59;
+  tstp 4 2016/11/17 01:13:46;
+  tsfp 4 2016/11/17 01:13:46;
+  atsfp 4 2016/11/17 01:13:46;
+  cltt 4 2016/11/17 01:04:09;
+  binding state free;
+  client-hostname "vxTarget";
+}
+lease 158.108.30.59 {
+  starts 4 2016/11/17 01:15:00;
+  ends 4 2016/11/17 01:45:00;
+  tstp 4 2016/11/17 01:13:46;
+  tsfp 4 2016/11/17 02:00:00;
+  atsfp 4 2016/11/17 02:00:00;
+  cltt 4 2016/11/17 01:04:16;
+  binding state active;
+  next binding state expired;
+  hardware ethernet e8:e7:32:da:50:4c;
+  uid "\001\350\3472\332PL";
+  client-hostname "vxTarget";
+}
+lease 158.108.30.59 {
+  starts 4 2016/11/17 01:15:00;
+  ends 4 2016/11/17 01:15:01;
+  tstp 4 2016/11/17 01:13:46;
+  tsfp 4 2016/11/17 02:00:00;
+  cltt 4 2016/11/17 01:04:16;
+  binding state abandoned;
+  next binding state free;
+  client-hostname "vxTarget";
+}
+lease 158.108.30.160 {
+  starts 4 2016/11/17 01:15:02;
+  ends 4 2016/11/17 01:45:02;
+  tstp 4 2016/11/17 02:00:02;
+  tsfp 4 2016/11/17 01:14:59;
+  cltt 4 2016/11/17 01:15:02;
+  binding state active;
+  next binding state expired;
+  hardware ethernet e8:e7:32:da:50:4c;
+  uid "\001\350\3472\332PL";
+  client-hostname "vxTarget";
+}

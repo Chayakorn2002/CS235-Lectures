@@ -1,0 +1,24 @@
+lease 158.108.21.26 {
+        starts 3 2010/05/26 01:44:44;
+        ends 3 2010/05/26 13:44:44;
+        tstp 3 2010/05/26 13:44:44;
+        binding state free;
+        hardware ethernet 00:0c:29:4b:80:2c; uid "\001\000\014)K\200,";
+}
+lease 158.108.21.41 {
+        starts 1 2010/05/31 03:56:53;
+        ends 1 2010/05/31 15:56:53;
+        tstp 1 2010/05/31 15:56:53;
+        binding state free;
+        hardware ethernet 00:21:5e:42:51:c9; 
+}
+lease 158.108.21.42 {
+        starts 2 2010/06/01 08:46:09;
+        ends 2 2010/06/01 08:48:09;
+        tstp 2 2010/06/01 08:48:09;
+        binding state free;
+        hardware ethernet 00:24:81:56:fe:08;
+        uid "\001\000$\201V\376\010"; 
+        client-hostname "SCI15";
+}
+

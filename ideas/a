@@ -1,0 +1,4867 @@
+    1  cd hoga
+    2  git pull
+    3  cd Desktop
+    4  ls
+    5  cd hoga2
+    6  l
+    7  git clone https://github.com/Kchanit/hoga.git
+    8  mkdir hoga3
+    9  cd hoga3
+   10  git clone https://github.com/Kchanit/hoga.git
+   11  cd hoga
+   12  code .
+   13  code .
+   14  code .
+   15  cd ..
+   16  cd 05-first-dockerfile
+   17  ls
+   18  cd 05-step3
+   19  code .
+   20  docker run --name myphp-apache -p 8083:80 -v ${PWD}/html:/var/www/heml myapp:apache
+   21  docker run --name myphp-apache -p 8083:80 -v ${PWD}/html:/var/www/html myapp:apache
+   22  cd ..
+   23  cd 05-step1
+   24  cls
+   25  clear
+   26  ls -la
+   27  cat Dockerfile
+   28  code .
+   29  docker build -t myapp .
+   30  docker run myapp
+   31  cd ..
+   32  cd 05-step2
+   33  ls -la
+   34  cat Dockerfile
+   35  code .
+   36  docker build myapp:web .
+   37  docker build -t  myapp:web .
+   38  docker run -p 8082:8000 myapp:web
+   39  cd ../05-step3
+   40  ls -la
+   41  code .
+   42  docker build -t myapp:apache .
+   43  docker run --name myphp-apache 8083:80 myapp:apache
+   44  docker run --name myphp-apache -p 8083:80 myapp:apache
+   45  clear
+   46  docker run --name myphp-apache -p 8083:80 -v ${PWD}/html:/var/www/html myapp:apache
+   47  cd ../..
+   48  cd 06-upload-custom-image-to-docker-hub
+   49  ls -la
+   50  code .
+   51  docker build -t mycurl .
+   52  docker run mycurl www.google.com
+   53  docker system prune
+   54  docker login
+   55  docker login
+   56  docker login
+   57  docker images ls
+   58  docker images ls -la
+   59  docker images ls -l
+   60  docker tag mycurl chayakorn2002/mycurl:latest
+   61  docker images ls
+   62  docker image ls
+   63  docker image 
+   64  docker images 
+   65  docker push chayakorn/mycurl:latest
+   66  docker push chayakorn2002/mycurl:latest
+   67  cd ../07-docker-compose.yml
+   68  สห ขสฟ
+   69  ls -la
+   70  code .
+   71  cd 07-step1
+   72  docker-compose up
+   73  docker-compose up
+   74  docker-compose up --build
+   75  cd ..
+   76  cd 07-step2
+   77  docker-compose down
+   78  cd ../07-step1
+   79  docker-compose down
+   80  docker images
+   81  docker rmi fce79de618bd
+   82  docker images
+   83  docker system prune
+   84  docker rmi bb10f2a229f4
+   85  docker images
+   86  cd ../07-step2
+   87  docker-compose up -d
+   88  docker-compose down
+   89  cd ../07-step3
+   90  clear
+   91  docker-compose up -d
+   92  docker-compose down
+   93  cd ../07-step4
+   94  docker-compose up -d
+   95  docker-compose up -d
+   96  docker system plune
+   97  docker system prune
+   98  docker-compose down
+   99  cd ../07-step5
+  100  cd Documents
+  101  ls
+  102  cd CS442
+  103  ls
+  104  cd cs442-docker
+  105  ls -la
+  106  cd 07-docker-compose.yml
+  107  code .
+  108  cd 07-step6
+  109  docker-compose up -d db
+  110  docker volumes ls
+  111  docker volume ls
+  112  docker volume ls -la
+  113  docker volume ls -l
+  114  docker volume ls
+  115  cd ../07-step5
+  116  docker-compose up -d db
+  117  cd ../07-step6
+  118  docker-compose down
+  119  cd ../07-step5
+  120  docker-compose up -d db
+  121  docker-compose run --rm dbclient
+  122  docker-compose down
+  123  cd ../07-step6
+  124  docker-compose up -d db
+  125  docker volume
+  126  docker volume ls
+  127  docker run -v my-vol:/mydata --rm -it ubantu /bin/bash
+  128  docker run -v my-vol:/mydata --rm -it ubautu /bin/bash
+  129  docker run -v my-vol:/mydata --rm -it ubuntu /bin/bash
+  130  docker-compose run --rm dbclient
+  131  docker run -v my-vol:/mydata --rm -it ubuntu /bin/bash
+  132  clear
+  133  docker-compose down
+  134  docker run -v my-vol:/mydata --rm -it ubuntu /bin/bash
+  135  docker-compose up -d db
+  136  docker-compose run --rm dbclient
+  137  docker volume rm my-vol
+  138  docker-compose down
+  139  docker volume rm my-vol
+  140  docker volume create --name my-vol
+  141  dokcer volume ls
+  142  dokker volume ls
+  143  docker volume ls
+  144  docker run -v my-vol:/mydata --rm -it ubuntu /bin/bash
+  145  cd ../../08-network-segragation
+  146  clear
+  147  docker network ls
+  148  docker network prune
+  149  docker run --rm --name my-webserver -d httpd
+  150  docker inspect my-webserver
+  151  clear
+  152  docker inspect my-webserver
+  153  clear
+  154  docker ps -a
+  155  docker run --rm chayakorn2002/mycurl my-webserver
+  156  docker run --rm chayakorn2002/mycurl 172.17.0.2
+  157  docker network create simple-network
+  158  docker network ls
+  159  docker ps -a
+  160  docker stop my-webserver
+  161  docker ps -a
+  162  docker run --rm --name my-webserver --network simple-network -d httpd
+  163  docker ps -a
+  164  docker inspect my-webserver
+  165  docker run --rm --network simple-network chayakorn2002/mycurl my-webserver
+  166  docker stop my-webser
+  167  docker stop my-webserver
+  168  hostname
+  169  who
+  170  whoami
+  171  whoami
+  172  who
+  173  who
+  174  who
+  175  who
+  176  ssh -l 6410450117 sukreep.cs.sci.ku.ac.th
+  177  ls
+  178  vim x.txt
+  179  vim x.txt
+  180  /var/folders/mq/3xk_39ls3c9_m0794_34mcs40000gn/T/multipass-gui.boGtKk.command ; exit;
+  181  /var/folders/mq/3xk_39ls3c9_m0794_34mcs40000gn/T/multipass-gui.TspCix.command ; exit;
+  182  cd Documents
+  183  ls -l
+  184  cd CS442
+  185  ls
+  186  cd cs442-docker
+  187  cd 09-docker-networks
+  188  cd 09-step1
+  189  code .
+  190  cd ../
+  191  code .
+  192  cd 09-step1
+  193  docker-compose up -d
+  194  docker network ls
+  195  docker run --rm --network 09-step1_app1_net chayakorn/mycurl app1
+  196  docker run --rm --network 09-step1_app1_net chayakorn2002/mycurl app1
+  197  docker-compose down
+  198  cd ../09-step2
+  199  docker-compose up -d
+  200  docker ps -a
+  201  docker-compose down
+  202  docker-compose up -d
+  203  docker-compose down
+  204  docker-compose up
+  205  docker-compose up
+  206  docker ps -a
+  207  docker ps
+  208  docker-compose ps
+  209  cd Documents
+  210  ls -l
+  211  cd CS442
+  212  cd cs442-docker
+  213  cd 09-docker-networks
+  214  cd 09-step2
+  215  docker-compose up
+  216  docker-compose up
+  217  docker-compose up
+  218  docker-compose up
+  219  docker ps -a
+  220  docker-compose down
+  221  cd ../../10-wordpress
+  222  code .
+  223  docker ps -a
+  224  docker-compose up -d
+  225  docker-compose up -d
+  226  docker ps -a
+  227  cd ../../
+  228  git clone https://github.com/CS442-661/01-docker-Chayakorn2002.git
+  229  cd cs442-docker
+  230  cd 10
+  231  ls -l
+  232  cd 10-wordpress
+  233  ls -la
+  234  docker-compose down
+  235  exit
+  236  clear
+  237  vim ~/.zshrc
+  238  source ~/.zshrc
+  239  git clone https://github.com/powerline/fonts.git --depth=1
+  240  cd fonts
+  241  ./install.sh
+  242  cd ..
+  243  rm -rf fonts
+  244  clear
+  245  cd Documents
+  246  ls -l
+  247  cd CS442
+  248  ls -l
+  249  cd 01-docker-Chayakorn2002
+  250  ls -l
+  251  code .
+  252  docker-compose up -d
+  253  docker ps -a
+  254  clear
+  255  source ~/.zshrc
+  256  source ~/.zshrc
+  257  export PS1=">>>"
+  258  clear
+  259  source ~/.zshrc
+  260  vim ~/.zshrc
+  261  cd Documents
+  262  ls -l
+  263  CS
+  264  cd CS442
+  265  ls -l
+  266  cd 01-docker-Chayakorn2002
+  267  code .
+  268  cd ../cs442-docker
+  269  ls -l
+  270  cd 07-docker-compose.yml
+  271  code .
+  272  cd 07-step5
+  273  docker-compose up -d
+  274  docker-compose up -d
+  275  docker-compose down
+  276  docker-compose run --rm dbclient
+  277  docker-compose up -d
+  278  docker-compose down
+  279  docker-compose up -d
+  280  vim ~/.zshrc
+  281  vim ~/.zshrc
+  282  source ~/.zshrc
+  283  clear
+  284  p10k configure
+  285  vim ~/.zshrc
+  286  source ~/.zshrc
+  287  whereis zsh
+  288  zsh
+  289  clear
+  290  uninstall_oh_my_zsh
+  291  uninstall_oh_my_zsh
+  292  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  293  rm /Users/chayakorn/.oh-my-zsh
+  294  rm -r /Users/chayakorn/.oh-my-zsh
+  295  ls -la /Users/chayakorn
+  296  rm -rf /Users/chayakorn/.oh-my-zsh
+  297  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  298  ls -la
+  299  cd Documents
+  300  cd CS442
+  301  ls 
+  302  cd 01-docker-Chayakorn2002
+  303  code .
+  304  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  305  ls
+  306  cd Documents
+  307  ls
+  308  cd CS442
+  309  ls
+  310  cd 01-docker-Chayakorn2002
+  311  code .
+  312  docker-compose up -d
+  313  cd Do
+  314  cd Documents
+  315  cd CS442
+  316  cd 01-docker-Chayakorn2002
+  317  code .
+  318  cd ../..
+  319  cd CS442
+  320  ls -l
+  321  mkdir 02
+  322  cd 02
+  323  git clone https://github.com/CS442-661/01-docker-Chayakorn2002.git
+  324  cd 01-docker-Chayakorn2002
+  325  code .
+  326  docker-compose up -d
+  327  cd Documents
+  328  ls -l
+  329  cd CS4
+  330  cd CS442
+  331  ls
+  332  cd cs442-docker
+  333  ls
+  334  docker-compose up -d
+  335  docker-compose down
+  336  cd ..
+  337  cd 02
+  338  ls
+  339  cd 01-docker-Chayakorn2002
+  340  docker-compose up -d
+  341  docker-compose down
+  342  docker-compose up -d
+  343  docker-compose down
+  344  docker-compose up -d
+  345  docker-compose down
+  346  docker-compose up --build\n
+  347  docker-compose up -d
+  348  docker-compose down
+  349  docker-compose up -d
+  350  docker-compose down
+  351  docker-compose up -d
+  352  cd Documents
+  353  cd CS442
+  354  cd 02
+  355  cd 01-docker-Chayakorn2002
+  356  ls
+  357  docker-compose down
+  358  docker-compose up -d
+  359  docker-compose down
+  360  docker-compose up -d
+  361  docker-compose down
+  362  docker-compose up -d
+  363  docker-compose down
+  364  docker-compose up 
+  365  git clone https://github.com/CS442-661/01-docker-Chayakorn2002.git
+  366  cd 01-docker-Chayakorn2002
+  367  code .
+  368  docker-compose up -d
+  369  docker-compose down
+  370  docker-compose up -d
+  371  docker-compose down
+  372  docker-compose up -d
+  373  docker-compose down
+  374  docker-compose up -d
+  375  docker-compose down
+  376  docker-compose up -d
+  377  docker-compose down
+  378  docker-compose up -d
+  379  docker-compose down
+  380  git add .
+  381  git status
+  382  git commit -m "First commit with every initial part"
+  383  git push origin main
+  384  cd Documents
+  385  cd CS442
+  386  cd 01-docker-Chayakorn2002
+  387  code .
+  388  docker-compose
+  389  docker-compose up -d
+  390  docker-compose down
+  391  docker-compose up -d
+  392  docker-compose down
+  393  cd Documents
+  394  cd CS442
+  395  cd 01-docker-Chayakorn2002
+  396  ls
+  397  code .
+  398  docker-compose up -d
+  399  docker-compose down
+  400  docker-compose up -d
+  401  docker-compose down
+  402  docker-compose up -d
+  403  docker-compose down
+  404  git add .
+  405  git status
+  406  docker-compose up -d
+  407  docker-compose down
+  408  docker-compose up -d
+  409  docker-compose down
+  410  cd Documents
+  411  cd CS442
+  412  cd 01-docker-Chayakorn2002
+  413  code .
+  414  docker-compose up -d
+  415  docker-compose docker-compose.yml
+  416  docker-compose down
+  417  git add .
+  418  git commit -m "Ying Prang's blog fixed & adding blog, footer, detail tag to index.html"
+  419  git config --global user.email "chayakorn.chi@ku.th"
+  420  git config --global user.name "Chayakorn2002"
+  421  git commit -m "Ying Prang's blog fixed & adding blog, footer, detail tag to index.html"
+  422  git branch
+  423  git status
+  424  git remote -v
+  425  git push origin main
+  426  ssh 6410450117@sukreep.cs.sci.ku.th
+  427  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  428  cd Documents
+  429  cd Workspace
+  430  cd ..
+  431  ls
+  432  mkdir unix
+  433  cd unix
+  434  vim vim file.txt
+  435  ls
+  436  ls -la
+  437  code .
+  438  rm vim
+  439  ls -la
+  440  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  441  code .
+  442  ld -l
+  443  ls -l
+  444  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  445  clear
+  446  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  447  cd Doc
+  448  cd Documents
+  449  cd CS442
+  450  git clone https://github.com/CS442-661/02-css-Chayakorn2002.git
+  451  code .
+  452  cd 02-css-Chayakorn2002
+  453  code .
+  454  docker-compose up -d
+  455  docker-compose dow
+  456  docker-compose down
+  457  cd Documents
+  458  cd unix
+  459  ls
+  460  ls -l
+  461  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  462  ls
+  463  set -o vi
+  464  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  465  set -o vi
+  466  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  467  set -o vi
+  468  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  469  logout
+  470  cd Do
+  471  cd Documents
+  472  cd unix
+  473  ls -l
+  474  vim lab-02-summary.txt
+  475  set -o vi
+  476  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  477  logout
+  478  ls -l
+  479  cd Documents
+  480  cd unix
+  481  ls -l
+  482  vim lab-02-summary.txt
+  483  ls
+  484  vim lab-02-summary.txt
+  485  vim 6410450117_lab-02-vim_summary.txt
+  486  vim lab-02-summary.txt
+  487  set -o vi
+  488  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  489  git clone https://github.com/Chayakorn2002/471-01-6410450117.git
+  490  cd 471-01-6410450117
+  491  code .
+  492  git clone https://github.com/Chayakorn2002/471-01-6410450117.git
+  493  git
+  494  git clone https://github.com/Chayakorn2002/471-01-6410450117.git
+  495  code .
+  496  git status
+  497  git init
+  498  git status
+  499  git add .
+  500  git commq -m "Adding Z"
+  501  git commit -m "Adding Z"
+  502  git status
+  503  git add .
+  504  git status
+  505  git commit -m "Adding Z"
+  506  git push origin main
+  507  git remote -v
+  508  git remote https://github.com/Chayakorn2002/471-01-6410450117.git
+  509  git remote -v
+  510  git remote add origin https://github.com/Chayakorn2002/471-01-6410450117.git
+  511  git remote -v
+  512  git add .
+  513  git commit -m "Adding Z"
+  514  git add .
+  515  git status
+  516  cd 471-01-6410450117
+  517  git remote -v
+  518  git status
+  519  git add .
+  520  git commit -m "Adding Z"
+  521  git status
+  522  git push origin main
+  523  cd src
+  524  cd ..
+  525  ls -l
+  526  git pull origin master
+  527  git remote -v
+  528  cd src
+  529  cd myapp
+  530  ls -l
+  531  git pull origin master
+  532  git pull origin main
+  533  ls -l
+  534  cd src
+  535  cd myapp
+  536  git statu
+  537  git status
+  538  git add .
+  539  git commit -m "update Z"
+  540  git push origin main
+  541  git add .
+  542  git commit -m "update Z 2"
+  543  git push origin main
+  544  git status
+  545  git add .
+  546  git commit -m "update Z too"
+  547  git pull origin main
+  548  git log --all --decorate --oneline --graph
+  549  git push origin master
+  550  git push origin main
+  551  git pull origin main
+  552  cd src
+  553  cd myapp
+  554  git pull origin main
+  555  git push origin main
+  556  git pull origin main
+  557  git status
+  558  git pull origin main
+  559  git add .
+  560  git commit -m "update Z too"
+  561  git push origin main
+  562  set -o vi
+  563  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  564  cd Doc
+  565  cd Documents
+  566  cd CS442
+  567  cd 01-docker-Chayakorn2002
+  568  ls -l
+  569  docker-compose up -d
+  570  ls -l
+  571  set -o vi
+  572  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  573  cd Documents
+  574  cd CS442
+  575  cd 01-docker-Chayakorn2002
+  576  ls -l
+  577  docker-compose down
+  578  set -o vi
+  579  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  580  docker system prune
+  581  docker images
+  582  docker volumes
+  583  docker volume
+  584  docker volume prune
+  585  docker images prune
+  586  docker image prune
+  587  docker system prune --all
+  588  docker-compose up -d
+  589  docker ps -a
+  590  docker-compose down
+  591  git init
+  592  git add .
+  593  git commit -m "Style's completed"
+  594  git status
+  595  git remote -v
+  596  git push origin main
+  597  docker-compose up -d
+  598  git add .
+  599  git status
+  600  git commit -m "specificity's component added"
+  601  git push origin main
+  602  docker-compose down
+  603  docker-compose up -d
+  604  docker-compose down
+  605  git add .
+  606  git commit -m "bg updated"
+  607  git push origin main
+  608  code .
+  609  git init
+  610  git branch
+  611  git branches
+  612  git branch
+  613  git remote -v
+  614  git pull origin main
+  615  cd Desktop
+  616  git clone https://github.com/Kchanit/hoga.git
+  617  cd hoga
+  618  code .
+  619  dart "/Users/chayakorn/Desktop/hoga/lib/main.dart"
+  620  flutter doctor
+  621  pub get
+  622  flutter pub get
+  623  flutter
+  624  vim ~/.zshrc
+  625  flutter
+  626  flutter doctor
+  627  flutter doctor -v
+  628  flutter packages get
+  629  brew upgrade dart
+  630  brew cleanup
+  631  flutter
+  632  flutter doctor -v
+  633  flutter pub get
+  634  git clone https://github.com/Chayakorn2002/math_game_1.git
+  635  cd math_game_1
+  636  code .
+  637  flutter pub get
+  638  flutter upgrade
+  639  flutter --version
+  640  code .
+  641  flutter channel master\n
+  642  flutter upgrade
+  643  flutter pub get
+  644  flutter
+  645  jdk --version
+  646  java --version
+  647  ls -l
+  648  git status
+  649  git pull origin main
+  650  git clone https://github.com/Chayakorn2002/471-01-6410450117.git
+  651  git log --all --decorate --oneline --graph
+  652  git tag
+  653  git tag -a v1.0.0 -m "first release"
+  654  git tag
+  655  git show v1.0.0
+  656  git log --oneline --graph
+  657  git tag -a v0.5.1 97ba047 -m "early version"
+  658  git tag
+  659  echo hi
+  660  git push origin v0.5.1
+  661  git push origin --tags
+  662  docker image ls
+  663  docker ps -a
+  664  docker run --name bird-nginx -p 8080:80 -d nginx
+  665  docker ps
+  666  docker ps -a
+  667  docker run --name chayakorn_atm -P -d ladyusaatm-usa
+  668  docker run --name chayakorn_atm -P -d ladyusa/atm-usa
+  669  docker ps
+  670  docker stop -a
+  671  docker stop de33978bc427
+  672  docker stop 7ef83a98923b
+  673  docker rm 7ef83a98923b
+  674  docker rm chayakorn_atm
+  675  docker images prune
+  676  docker image prune
+  677  docker-compose up -d
+  678  docker ps
+  679  docker-compose down
+  680  cd Desktop
+  681  brew install git-flow
+  682  mkdir git-flow-test
+  683  cd git-flow-test
+  684  git init
+  685  git flow init
+  686  git flow init -d
+  687  git branch
+  688  rm -rf .git
+  689  clear
+  690  git init
+  691  vim README.md
+  692  git add .
+  693  git commit -m "🍾 first commit"
+  694  glola
+  695  vim ~/.zshrc
+  696  alias
+  697  glola
+  698  git flow init -d
+  699  git branch
+  700  git flow feature start user-profile
+  701  git branch
+  702  vim tan
+  703  ls -l
+  704  git add .
+  705  git commit -m "first user-profile feature"
+  706  git remote add origin https://github.com/Chayakorn2002/gitflow-test.git
+  707  git remote -v
+  708  git push origin main
+  709  git flow feature publish
+  710  git flow feature publish user-profile
+  711  git flow feature start user-data
+  712  glola
+  713  vim tan2
+  714  ls -l
+  715  git flow feature publish user-data
+  716  git flow feature finish user-data
+  717  git add .
+  718  glola
+  719  git status
+  720  git flow feature start user-data
+  721  glola
+  722  ls -la
+  723  git add .
+  724  git commit -m "second commit"
+  725  git flow feature finish user-data
+  726  glola
+  727  git flow feature finish user-profile
+  728  glola
+  729  git flow release start 0.0.1
+  730  glola
+  731  git flow release finish 0.0.1
+  732  glola
+  733  git push origin --tags
+  734  git push origin main
+  735  git status
+  736  git push origin develop
+  737  git flow hotfix start user-profile-fix
+  738  ls -l
+  739  vim tan
+  740  git add .
+  741  git commit -m "user-profile fixed"
+  742  git flow hotfix finish user-profile-fix
+  743  glola
+  744  git push origin main develop
+  745  cd Documents
+  746  ls
+  747  cd CS442
+  748  ls -l
+  749  docker ps -a
+  750  docker ps
+  751  cd ../..
+  752  ls -la
+  753  vim ./zshrc
+  754  vim .zshrc
+  755  cd Documents
+  756  cd CS442
+  757  sail
+  758  Sail
+  759  alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+  760  sial
+  761  sail
+  762  cd Documents
+  763  cd CS442
+  764  sail
+  765  curl -s "https://laravel.build/cs442-661-200" | bash
+  766  ls -l
+  767  cd cs442-661-200
+  768  sail up -d
+  769  docker ps -a
+  770  code .
+  771  sail down
+  772  sail up -d
+  773  sail composer composer require laravel/breeze --dev
+  774  sail composer require laravel/breeze --dev
+  775  claer
+  776  clear
+  777  sail
+  778  clear
+  779  sail
+  780  sail artisan breeze:install blade
+  781  set -o vi
+  782  sail artisan migrate
+  783  sail npm install
+  784  sail npm run dev
+  785  sail artisan route:list
+  786  sail route:
+  787  sail route:list
+  788  sail artisan route:list
+  789  sail artisan make:controller --help
+  790  sail artisan make:controller AboutController
+  791  sail artisan route:list
+  792  sail artisan make:controller HistoryController
+  793  sail artisan route:list
+  794  sail artisan make:controller HelloController
+  795  sail artisan route:list
+  796  docker ps -a
+  797  sail down
+  798  cd Documents
+  799  cd CS442
+  800  cd cs442-661-200
+  801  sail down
+  802  docker ps -a
+  803  cd Desktop
+  804  ls -l
+  805  vim Seminar_topic.txt
+  806  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  807  ma nkill
+  808  man kill
+  809  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  810  man tree
+  811  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  812  man clear
+  813  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  814  ssh
+  815  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  816  git init
+  817  git remote add with_streak https://github.com/Chayakorn2002/math_game_2.git
+  818  git remote -v
+  819  git branch
+  820  git add .
+  821  git commit -m "with streak"
+  822  git push with_streak main
+  823  git clone https://github.com/CS442-661/03-laravel-layout-Chayakorn2002.git
+  824  docker ps -
+  825  docker ps -a
+  826  cd Documents
+  827  ls -l
+  828  cd CS442
+  829  ls -l
+  830  sail
+  831  docker sail
+  832  cat ~/.zshrc
+  833  curl -s "https://laravel.build/laravel-started?with=mysql,redis,mailpit" | bash
+  834  cd laravel-started
+  835  docker sail -d
+  836  sail up -d
+  837  code .
+  838  sail composer require laravel/breeze --dev 
+  839  sail artisan breeze:install blade
+  840  sail npm run dev
+  841  sail artisan routes:list
+  842  sail artisan route:list
+  843  sail artisan make:controller About
+  844  sail artisan make:controller AboutController
+  845  sail artisan route:list
+  846  sail artisan make:controller ForumController
+  847  sail artisan route:list
+  848  sail artisan make:controller SongController
+  849  sail artisan route:list
+  850  npm run dev
+  851  sail npm run dev
+  852  clear
+  853  clear -x
+  854  clear
+  855  sail down
+  856  cd ..
+  857  ls -l
+  858  cd 03-laravel-layout-Chayakorn2002
+  859  docker run --rm \\n    -u "$(id -u):$(id -g)" \\n    -v "$(pwd):/var/www/html" \\n    -w /var/www/html \\n    laravelsail/php82-composer:latest \\n    composer install --ignore-platform-reqs
+  860  cp .env.example .env
+  861  code .
+  862  sail up -d
+  863  sail artisan key:generate
+  864  sail yarn install
+  865  sail yarn dev
+  866  sail down
+  867  git add .
+  868  git commit -m "task completed"
+  869  git push origin main
+  870  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  871  ls -la
+  872  vim .bash_profile
+  873  set -o vi
+  874  vim .bashrc
+  875  ls -a
+  876  rm .bashrc
+  877  ls -l
+  878  ls -la
+  879  code .
+  880  git tag -a v1.0.0 -m "first release"
+  881  git tag -a v1.0.1 -m "first release"
+  882  git tag
+  883  git show v1.0.0
+  884  git status
+  885  git push origin v1.0.1
+  886  git tags
+  887  git tag -a
+  888  git tag
+  889  git tag -d v0.5.1
+  890  git push origin --delete v0.5.1
+  891  istory
+  892  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  893  man wc
+  894  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  895  man date
+  896  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  897  ls -la
+  898  cd .
+  899  cd ..
+  900  cd .
+  901  echo $PATH
+  902  cd chayakorn
+  903  echo $PATH
+  904  cd .
+  905  ls -l
+  906  ssh sukreep.cs.sci.ku.ac.th
+  907  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  908  cd Doc
+  909  cd Documents
+  910  ls -l
+  911  cd SE
+  912  cd Documents
+  913  cd SE
+  914  giy clone https://github.com/ladyusa/atm.git
+  915  git clone https://github.com/ladyusa/atm.git
+  916  cd atm
+  917  code .
+  918  cd ..
+  919  ls -l
+  920  git clone https://github.com/ladyusa/atm-di-layer.git
+  921  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  922  set -o vi
+  923  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  924  sail up -d
+  925  sail yarn dev
+  926  sail down
+  927  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  928  man kill
+  929  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  930  man jobs
+  931  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  932  sail up -d
+  933  sail yarn dev
+  934  sail artisan migrate 
+  935  sail down
+  936  sail up -d
+  937  sail artisan migrate 
+  938  sail mysql
+  939  sail down
+  940  sail up -d
+  941  sail myaql
+  942  sail mysql
+  943  artisan migrate
+  944  sail artisan migrate:status
+  945  sail artisan migrate:rollback
+  946  sail artisan make:model -h
+  947  sail artisan make:model Song -m
+  948  sail artisan migrate 
+  949  sail artisan migrate:status
+  950  sail artisan tinker
+  951  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  952  sail yarn dev
+  953  sail artisan make:seeder -h
+  954  sail artisan make:seeder SongSeeder
+  955  sail artisan tinker
+  956  sail artisan db:seed -h
+  957  sail artisan db:seed --class=SongSeeder
+  958  sail artisan tinker
+  959  sail artisan db:seed --class=SongSeeder
+  960  sail artisan migrate
+  961  sail artisan migrate -h
+  962  sail artisan migrate:freah --seed
+  963  sail artisan migrate:fresh --seed
+  964  sail artisan make:factory -h
+  965  sail artisan make:factory SongFactory --model=Song
+  966  sail artisan tinker
+  967  sail artisan migrate:fresh --seed
+  968  sail artisan tinker
+  969  sail down
+  970  python --version
+  971  /Applications/Python\ 3.10/Update\ Shell\ Profile.command ; exit;
+  972  /Applications/Python\ 3.10/Install\ Certificates.command ; exit;
+  973  python
+  974  python --version
+  975  python3
+  976  python3 --version
+  977  pip3 install torch torchvision torchaudio
+  978  set -o vi
+  979  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  980  set -o vi
+  981  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  982  ls 
+  983  cd Documents
+  984  ls -l
+  985  cd SE
+  986  LS
+  987  atm
+  988  ls -l
+  989  idea .
+  990  cd ..
+  991  cd 471-01-6410450117
+  992  idea .
+  993  ls -l
+  994  ls -la
+  995  vim .zshrc
+  996  set -o vi
+  997  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  998  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+  999  vim .zshrc
+ 1000  clear
+ 1001  set -o vi
+ 1002  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1003  cd Documents
+ 1004  ls -l
+ 1005  cd CS442
+ 1006  ls -l
+ 1007  cd 03-laravel-layout-Chayakorn2002
+ 1008  sail up -d
+ 1009  code .
+ 1010  sail yarn dev
+ 1011  sail artisan make:model Artist -m
+ 1012  sail artisan migrate:fresh
+ 1013  sail artisan tinker
+ 1014  sail artisan migrate:fresh
+ 1015  sail artisan tinker
+ 1016  sail artisan make:controller -h
+ 1017  sail artisan make:controller ArtistController -r
+ 1018  sail artisan route:list
+ 1019  sail artisan tinker
+ 1020  sail yarn dev
+ 1021  git add 
+ 1022  git add .
+ 1023  git commit -m "25 Jul update"
+ 1024  git remote -h
+ 1025  git remote -v
+ 1026  git brqanch
+ 1027  git branch
+ 1028  git push origin main
+ 1029  sail down
+ 1030  set -o vi
+ 1031  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1032  ssh 6410450117@.cs.sci.ku.ac.th
+ 1033  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1034  man mkdir
+ 1035  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1036  ssh user99@sukreep.cs.sci.ku.ac.th
+ 1037  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1038  ssh user99@sukreep.cs.sci.ku.ac.th
+ 1039  cd Do
+ 1040  cd Documents
+ 1041  cd SE
+ 1042  git clone https://github.com/Chayakorn2002/atm-di-layer.git
+ 1043  cd Doc
+ 1044  cd Documents
+ 1045  cd SE
+ 1046  git clone https://github.com/ladyusa/atm-di-layer.git
+ 1047  git branch
+ 1048  git remote -v
+ 1049  git remote -h
+ 1050  git remote add Chayakorn https://github.com/Chayakorn2002/atm-di-layer.git
+ 1051  git remote -v
+ 1052  git branch -h
+ 1053  git branch code-config
+ 1054  git branch
+ 1055  git checkout -h
+ 1056  git checkout code-config
+ 1057  git branch
+ 1058  git add .
+ 1059  git commit -m "Spring Code Config Completed"
+ 1060  git push Chayakorn code-config
+ 1061  git branch
+ 1062  git remote -v
+ 1063  git branch annotation
+ 1064  git checkout annotation
+ 1065  git add .
+ 1066  git commit -m "Annotation based"
+ 1067  git push origin annotation
+ 1068  cd Documents
+ 1069  ls -l
+ 1070  cd CS442
+ 1071  ls -l
+ 1072  git clone https://github.com/nopnapatn/eventnie.git
+ 1073  cd eventnie
+ 1074  code .
+ 1075  sail up -d
+ 1076  docker run --rm \\n    -u "$(id -u):$(id -g)" \\n    -v "$(pwd):/var/www/html" \\n    -w /var/www/html \\n    laravelsail/php82-composer:latest \\n    composer install --ignore-platform-reqs
+ 1077  sail
+ 1078  sail up -d
+ 1079  sail yarn dev
+ 1080  sail down 
+ 1081  Last login: Mon Jul 31 21:52:02 on ttys004\n chayakorn@Chayakorns-MacBook-Pro  ~  brew ins\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+ 1082  brew install git-flow
+ 1083  git flow
+ 1084  gitflow
+ 1085  git
+ 1086  clear
+ 1087  git
+ 1088  cd Documents
+ 1089  cd CS442
+ 1090  ls -l
+ 1091  cd 03-laravel-layout-Chayakorn2002
+ 1092  code .
+ 1093  git revert 9669a7469a2f2544f29dd0b50af9ce58d76de485
+ 1094  cd ..
+ 1095  mkdir 03
+ 1096  cd 03
+ 1097  git clone https://github.com/CS442-661/03-laravel-layout-Chayakorn2002.git
+ 1098  code .
+ 1099  git revert --skip
+ 1100  git log --all --decorate --oneline --graph
+ 1101  cd 03-laravel-layout-Chayakorn2002
+ 1102  git log --all --decorate --oneline --graph
+ 1103  git checkout 9669a74
+ 1104  git log --all --decorate --oneline --graph
+ 1105  git branch re-learn-01
+ 1106  git checkout re-learn-01
+ 1107  git log --all --decorate --oneline --graph
+ 1108  sail up -d
+ 1109  sail yarn dev
+ 1110  sail artisan make:model Artist -m
+ 1111  sail artisan make:model Sons -m
+ 1112  sail artisan make:model Song -m
+ 1113  sail artisan migrate:fresh
+ 1114  sail artisan tinker
+ 1115  sail artisan make:controller ArtisanController -r
+ 1116  sail artisan route::list
+ 1117  sail artisan route
+ 1118  sail artisan route:list
+ 1119  sail artisan make:controller ArtistController -r
+ 1120  sail artisan route:list
+ 1121  sail artisan make:model playlist -m
+ 1122  sail artisan migrate
+ 1123  sail artisan make:migration create_playlist_song_migration --create="playlist_song"
+ 1124  sail artisan migrate
+ 1125  sail artisan tinker
+ 1126  sail artisan migrate
+ 1127  sail artisan tinker
+ 1128  sail artisan make:factory ArtistFactory
+ 1129  sail artisan make:factory PlaylistFactory
+ 1130  sail artisan make:seeder UserSeeder
+ 1131  sail artisan make:seeder ArtistSeeder
+ 1132  sail artisan make:seeder PlaylistSeeder
+ 1133  sail artisan migrate::fresh --seed
+ 1134  sail artisan migrate:fresh --seed
+ 1135  sail artisan tinker
+ 1136  sail artisan db:seed
+ 1137  sail artisan tinker
+ 1138  run seeders
+ 1139  sail artisan migrate:fresh --seed
+ 1140  sail artisan tinker
+ 1141  sail artisan migrate:fresh --seed
+ 1142  sail artisan tinker
+ 1143  sail artisan migrate:fresh --seed
+ 1144  sail artisan tinker
+ 1145  git add .
+ 1146  git commit -m "Assignment 04 completed"
+ 1147  git push origin re-learn-01
+ 1148  git checkout main
+ 1149  git checkout re-learn-01
+ 1150  git push origin main
+ 1151  git checkout main
+ 1152  git merge re-learn-01
+ 1153  git merge - 
+ 1154  git branch -m main old-main
+ 1155  git branch -m re-learn-01 main
+ 1156  git push -f origin main
+ 1157  git checkout main
+ 1158  git merge --abort
+ 1159  git reset --hard a31539ff17689e411a05121fe63270a5d3fcbacd
+ 1160  git branch
+ 1161  git log --all --decorate --oneline --graph
+ 1162  git checkout main
+ 1163  git push origin main
+ 1164  git push origin old-main
+ 1165  git branch
+ 1166  sail
+ 1167  cd 02-css-Chayakorn2002
+ 1168  sail
+ 1169  cd
+ 1170  cd Documents
+ 1171  cd CS442
+ 1172  cd eventnie
+ 1173  sail
+ 1174  git checkout old-main
+ 1175  sail down
+ 1176  git checkout re-learn-01
+ 1177  git branch -m re-learn-01 main
+ 1178  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1179  git branch -m re-learn-01 main
+ 1180  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1181  git remote add https://github.com/Chayakorn2002/webtech-repo.git
+ 1182  git remote add my-repo https://github.com/Chayakorn2002/webtech-repo.git
+ 1183  git add .
+ 1184  git commit -m "my-repo"
+ 1185  git push my-repo re-learn-01
+ 1186  sail up -d
+ 1187  sail yarn dev
+ 1188  sail down
+ 1189  sail up -d
+ 1190  sail yarn dev
+ 1191  echo "# practive-uml-code-6410450117" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin https://github.com/Chayakorn2002/practive-uml-code-6410450117.git\ngit push -u origin main
+ 1192  git add .
+ 1193  git commit -m "Modeling"
+ 1194  git push origin main
+ 1195  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1196  sail up -d
+ 1197  sail yarn dev
+ 1198  clear -x
+ 1199  sail artisan tinker
+ 1200  sail artisan migrate:fresh --seed
+ 1201  sail artisan tinker
+ 1202  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1203  sail down
+ 1204  git add .
+ 1205  git commit -m "Factory updated"
+ 1206  git remote -v
+ 1207  git push my-repo re-learn-01
+ 1208  git push origin re-learn-01
+ 1209  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1210  sail up -d
+ 1211  sail yarn dev
+ 1212  clear -x
+ 1213  sail artisan tinker
+ 1214  sail artisan migrate:fresh --seed
+ 1215  sail artisan tinker
+ 1216  sail artisan route:list
+ 1217  sail artisan tinker
+ 1218  sail artisan make:controller PlaylistController -r
+ 1219  sail artisan make:controller Admin/PlaylistController -r
+ 1220  sail artisan route:list
+ 1221  sail down
+ 1222  git add .
+ 1223  ls -la
+ 1224  echo $PS1
+ 1225  less .zshrc
+ 1226  clear
+ 1227  ls
+ 1228  vim ~/.zhrc
+ 1229  vim ~/.zshrc
+ 1230  source ~/.zshrc
+ 1231  clear
+ 1232  ;s
+ 1233  ls
+ 1234  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+ 1235  source ~/.zshrc
+ 1236  vim ~/.zshrc
+ 1237  source ~/.zshrc
+ 1238  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+ 1239  vim ~/.zshrc
+ 1240  source ~/.zshrc
+ 1241  clear
+ 1242  git log --all --decorate --oneline --graph
+ 1243  glola
+ 1244  cd 
+ 1245  ls
+ 1246  cd Documents
+ 1247  ls -l
+ 1248  cd CS442
+ 1249  ls -l
+ 1250  cd 01-docker-Chayakorn2002
+ 1251  glola
+ 1252  cd
+ 1253  sail up -d
+ 1254  sail yarn dev
+ 1255  sail artisan tinker
+ 1256  cd ..
+ 1257  cd
+ 1258  cd Documents
+ 1259  sail artisan tinker
+ 1260  sail artisan make:policy PlaylistPolicy --model=Playlist
+ 1261  sail artisan make:migration -h
+ 1262  sail artisan make:migration users_table_add_role --table="users"
+ 1263  clear -x
+ 1264  sail artisan migrate:status
+ 1265  sail artisan migrate
+ 1266  sail artisan migrate:status
+ 1267  sail artisan tinker
+ 1268  sail artisan make:policy ArtistPolicy --model=Artist
+ 1269  sail artisan tinker
+ 1270  sail down
+ 1271  git add .
+ 1272  git commit -m "Authentication and Authorization"
+ 1273  git push origin re-learn-01
+ 1274  git push my-repo re-learn-01
+ 1275  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1276  cd Documents
+ 1277  cd CS442
+ 1278  ls
+ 1279  cd eventnie
+ 1280  code .
+ 1281  git branch
+ 1282  giy pull
+ 1283  git pull
+ 1284  git pull origin main
+ 1285  glola
+ 1286  git branch
+ 1287  git checkout feature/database
+ 1288  glola
+ 1289  git flow init
+ 1290  git branch
+ 1291  git pull
+ 1292  git branch
+ 1293  glola
+ 1294  clear -x
+ 1295  sail up -d
+ 1296  sail yarn dev
+ 1297  sail down
+ 1298  sail up -d
+ 1299  sail yarn dev
+ 1300  sail down
+ 1301  sail up -d
+ 1302  sail yarn add vite
+ 1303  sail yarn dev
+ 1304  sail up -d
+ 1305  sail down
+ 1306  sail up -d
+ 1307  sail down
+ 1308  sail up -d
+ 1309  sail yarn dev
+ 1310  sail down
+ 1311  sail up -d
+ 1312  sail yarn dev
+ 1313  sail down
+ 1314  sail up -d
+ 1315  sail yarn dev
+ 1316  sail composer require laravel/breeze --dev 
+ 1317  sail artisan breeze:install blade
+ 1318  sail yarn dev
+ 1319  sail down
+ 1320  sail up -d
+ 1321  sail yarn dev
+ 1322  sail down
+ 1323  sail up -d
+ 1324  sail yarn dev
+ 1325  sail npm run dev
+ 1326  sail yarn dev
+ 1327  cd Documents
+ 1328  cd CS442
+ 1329  git clone https://github.com/nopnapatn/eventnie.git
+ 1330  cd eventnie
+ 1331  code .
+ 1332  cd ..
+ 1333  cd All-test
+ 1334  ls -l
+ 1335  cd eventnie
+ 1336  code .
+ 1337  sail doen
+ 1338  sail down
+ 1339  git glola
+ 1340  glola
+ 1341  git branch
+ 1342  git checkout feature/database
+ 1343  git branch
+ 1344  sail
+ 1345  sail up -d
+ 1346  composer require laravel/sail --dev\n
+ 1347  sail up -d
+ 1348  docker ps
+ 1349  echo "alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'" >> ~/.zshrc
+ 1350  sail
+ 1351  cd 
+ 1352  vim ~/.zshrc
+ 1353  sail
+ 1354  bash ./vendor/laravel/sail/bin/sail up ✅
+ 1355  docker run --rm \\n    -u "$(id -u):$(id -g)" \\n    -v "$(pwd):/var/www/html" \\n    -w /var/www/html \\n    laravelsail/php82-composer:latest \\n    composer install --ignore-platform-reqs
+ 1356  sail
+ 1357  sail up -d
+ 1358  sail yarn dev
+ 1359  sail yarn add vite
+ 1360  sail yarn dev
+ 1361  cp .env.sample .env
+ 1362  cp .env.example .env
+ 1363  sail artisan key:generate
+ 1364  sail yarn dev
+ 1365  sail doen
+ 1366  sail down
+ 1367  sail up -d
+ 1368  sail yarn dev
+ 1369  sail artisan migrate:fresh --seed
+ 1370  sail artisan migrate
+ 1371  sail down
+ 1372  sail up -d
+ 1373  sail down
+ 1374  sail up -d
+ 1375  sail yarn dev
+ 1376  sail artisan migrate
+ 1377  sail artisan tinker
+ 1378  sail artisan migrate:status
+ 1379  sail artisan make:model event -m
+ 1380  sail artisan migrate
+ 1381  cd Desktop
+ 1382  git clone https://github.com/nopnapatn/eventnie.git
+ 1383  cd eventnie
+ 1384  cpode .
+ 1385  code .
+ 1386  sail down 
+ 1387  sail
+ 1388  docker run --rm \\n    -u "$(id -u):$(id -g)" \\n    -v "$(pwd):/var/www/html" \\n    -w /var/www/html \\n    laravelsail/php82-composer:latest \\n    composer install --ignore-platform-reqs
+ 1389  sail yarn add vite
+ 1390  cp .env.example .env
+ 1391  sail artisan key:generate
+ 1392  sail up -d
+ 1393  sail artisan key:generate
+ 1394  sail artisan migrate
+ 1395  sail doen
+ 1396  sail down
+ 1397  sail up -d
+ 1398  sail yarn dev
+ 1399  sail artisan migrate
+ 1400  sail down
+ 1401  sail build --no-cache
+ 1402  sail up -d
+ 1403  sail artisan key:generate
+ 1404  sail yarn dev
+ 1405  sail artisan migrate
+ 1406  sail artisan make:seeder UserSeeder
+ 1407  sail artisan make:seeder EventSeeder
+ 1408  sail artisan make:factory EventFactory
+ 1409  sail artisan migrate:fresh --seed
+ 1410  sail artisan tinker
+ 1411  sail artisan migrate:fresh --seed
+ 1412  sail up -d
+ 1413  sail down
+ 1414  sail up -d
+ 1415  sail artisan migrate:fresh --seed
+ 1416  sail down
+ 1417  sail up -d
+ 1418  sail artisan migrate:fresh --seed
+ 1419  sail artisan tinker
+ 1420  sail yarn dev
+ 1421  sail artisan --version
+ 1422  sail artisan make:controller AdminController -r
+ 1423  sail artisan -
+ 1424  sail artisan --version
+ 1425  sail artisan make:migration create_event_user_migration --create="event_user"
+ 1426  sail artisan make:model certificate -m
+ 1427  sail artisan make:model certification -m
+ 1428  sail artisan make:model Kanban -m 
+ 1429  sail artisan make:migration create_waitlist__migration --create="waitlist"
+ 1430  sail artisan tinker
+ 1431  sail artisan migrate:fresh --seed
+ 1432  sail down
+ 1433  sail up -d
+ 1434  sail yarn dev
+ 1435  git add .
+ 1436  git init
+ 1437  git add .
+ 1438  git commit -m "UML-to-code practice redo"
+ 1439  git remote add re-learn https://github.com/Chayakorn2002/practive-uml-code-6410450117.git
+ 1440  git push re-learn main
+ 1441  git push -f re-learn main
+ 1442  git add .
+ 1443  git commit -m "Resubmitted complete"
+ 1444  git push re-learn main
+ 1445  git push -f re-learn main
+ 1446  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1447  vim ~/.zshrc
+ 1448  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1449  vim ~/.zshrc
+ 1450  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1451  cd Desktop
+ 1452  ls -l
+ 1453  vim song.txt
+ 1454  clear -x
+ 1455  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1456  scp song.txt 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117
+ 1457  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1458  scp 6410450117@sukreep.cs.sci.ku.ac.th:home/6410450117/vim_ex.txt .
+ 1459  scp 6410450117@sukreep.cs.sci.ku.ac.th:home/6410450117/song.txt .
+ 1460  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/song.txt .
+ 1461  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/vim_ex.txt .
+ 1462  ssh 6410450117@sukreep.cs.sci.ku.th 
+ 1463  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1464  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/vim_ex.txt .
+ 1465  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1466  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/vim_ex.txt .
+ 1467  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1468  clear
+ 1469  ls
+ 1470  clear
+ 1471  curl -fSsL https://repo.fig.io/scripts/install-headless.sh | bash
+ 1472  java --version
+ 1473  clear
+ 1474  exit
+ 1475  brew install fig
+ 1476  fig
+ 1477  fig doctor
+ 1478  fig issue
+ 1479  fig doctor --verbose
+ 1480  fig restart
+ 1481  fig doctor --verbose
+ 1482  fig
+ 1483  clear
+ 1484  vim
+ 1485  sail up -d
+ 1486  sail yarn dev
+ 1487  sail down
+ 1488  sail up -d
+ 1489  sail yarn dev
+ 1490  git branch
+ 1491  glola
+ 1492  git flow feature start event
+ 1493  git flow init
+ 1494  git flow feature start event
+ 1495  git flow init
+ 1496  git flow feature start event
+ 1497  git switch develop
+ 1498  git switch feature/database
+ 1499  git branch
+ 1500  glola
+ 1501  git switch main
+ 1502  git commit -m "Migration customized"
+ 1503  git add .
+ 1504  git commit -m "Migration customized"
+ 1505  git switch main
+ 1506  git pull 
+ 1507  git brannch
+ 1508  git branch
+ 1509  glola
+ 1510  git branch
+ 1511  git flow init
+ 1512  git pull
+ 1513  git branch
+ 1514  git branch -r
+ 1515  git pull origin main
+ 1516  git pull origin --all
+ 1517  git pull --all
+ 1518  git pull origin main
+ 1519  git switch develop
+ 1520  git branch
+ 1521  git branch ขพ
+ 1522  git branch -r
+ 1523  git flow feature start event
+ 1524  git flow init
+ 1525  git branch
+ 1526  git branch -d ขพ
+ 1527  git flow init
+ 1528  git init -d
+ 1529  git flow init -d
+ 1530  git branch
+ 1531  git branch -r
+ 1532  git flow feature start event
+ 1533  git yarn dev
+ 1534  sail yarn dev
+ 1535  sail down
+ 1536  sail up -d
+ 1537  sail yarn dev
+ 1538  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1539  sail artisan make:controller EventController -r
+ 1540  sail artisan route:list
+ 1541  sail artisan make:migration create_event_table -m
+ 1542  sail artisan make:model Event -m
+ 1543  sail down
+ 1544  sail up -d
+ 1545  sail yarn dev
+ 1546  git switch feature/database
+ 1547  sail artisan make:policy EventPolicy --model=Event
+ 1548  sail down
+ 1549  sail up -d
+ 1550  sail artisan make:policy EventPolicy --model=Event
+ 1551  sail yarn dev
+ 1552  sail down
+ 1553  sail up -d
+ 1554  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1555  sail yarn dev
+ 1556  code .
+ 1557  git pull
+ 1558  git branch
+ 1559  git switch feature/database
+ 1560  sail artisan make:factory EventFactory
+ 1561  sail artisan make:seeder EventSeeder
+ 1562  git switch feature/database
+ 1563  echo $HOME
+ 1564  vim song.txt
+ 1565  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1566  git commit -m "Switch choey choey"
+ 1567  git add .
+ 1568  git commit -m "Switch choey choey"
+ 1569  git switch feature/database
+ 1570  git switch feature/event
+ 1571  sail artisan migrate:fresh --seed
+ 1572  sail artisan make:seeder UserSeeder
+ 1573  sail artisan migrate:fresh --seed
+ 1574  sail artisan storage:link
+ 1575  sail artisan migrate:fresh --seed
+ 1576  sail down
+ 1577  sail up -d
+ 1578  sail yarn dev
+ 1579  sail artisan migrate:fresh --seed
+ 1580  sail artisan route:list
+ 1581  sail artisan migrate:fresh --seed
+ 1582  sail down
+ 1583  sail up -d
+ 1584  sail yarn dev
+ 1585  sail down
+ 1586  sail up -d
+ 1587  sail yarn dev
+ 1588  sail artisan make:policy EventPolicy --model=Event
+ 1589  php run dev
+ 1590  php
+ 1591  npm run dev
+ 1592  clear -x
+ 1593  sail artisan migrate:fresh --seed
+ 1594  sail artisan inker
+ 1595  sail artisan tinker
+ 1596  sail down
+ 1597  sail up -d
+ 1598  sail yarn dev
+ 1599  sail artisan tinker
+ 1600  sail down
+ 1601  sail up -d
+ 1602  sail yarn dev
+ 1603  sail artisan migrate:fresh --seed
+ 1604  sail artisan tinker
+ 1605  sail down
+ 1606  sail up -d
+ 1607  sail yarn dev
+ 1608  code .
+ 1609  ssh
+ 1610  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1611  code .
+ 1612  sail down
+ 1613  sai up -d
+ 1614  sail up -d
+ 1615  sail yarn dev
+ 1616  sail artisan migrate:fresh --seed
+ 1617  sail artisan tinker
+ 1618  sail down
+ 1619  sail up -d 
+ 1620  sail yarn dev
+ 1621  git add .
+ 1622  git commit -m "Event's controller handling"
+ 1623  git push origin feature/event
+ 1624  git pull
+ 1625  git branch
+ 1626  git branch -r
+ 1627  git switch feature/skeleton
+ 1628  sail yarn dev
+ 1629  sail down
+ 1630  sail up -d
+ 1631  sail yarn dev
+ 1632  sail down
+ 1633  sail yarn dev
+ 1634  sail up -d
+ 1635  sail yarn dev
+ 1636  sail artisan migrate:fresh --seed
+ 1637  sail artisan ti
+ 1638  sail artisan migrate:fresh --seed
+ 1639  sail artisan ti
+ 1640  sail artisan make:policy AdminPolicy 
+ 1641  sail artisan make:controller AdminController -r
+ 1642  sail artisan migrate:fresh --seed
+ 1643  sail artisan tinker
+ 1644  sail down
+ 1645  sail up
+ 1646  sail up -d
+ 1647  sail yarn dev
+ 1648  sail artisan migrate:fresh --seed
+ 1649  sail artisan route:list
+ 1650  sail down
+ 1651  sail up -d
+ 1652  sail yarn dev
+ 1653  sail down
+ 1654  sail up -d
+ 1655  sail yarn dev
+ 1656  sail artisan migrate:fresh --seed
+ 1657  git commit -m "Event's creating and all admin handling"
+ 1658  git add .
+ 1659  git commit -m "Event's creating and all admin handling"
+ 1660  git push origin feature/skeleton
+ 1661  sail down
+ 1662  glola
+ 1663  git pull
+ 1664  git flow feature start user-event-participation
+ 1665  git branch
+ 1666  glola
+ 1667  sail up -d
+ 1668  sail yarn deev
+ 1669  sail yarn dev
+ 1670  git pull
+ 1671  glola
+ 1672  git checkout feature/skeleton
+ 1673  git pull
+ 1674  sail down
+ 1675  sail up -d
+ 1676  sail yarn dev
+ 1677  git checkout feature/user-event-participation
+ 1678  git checkout feature/skeleton
+ 1679  git checkout feature/user-event-participation
+ 1680  git checkout feature/skeleton
+ 1681  git flow feature start event-participation
+ 1682  git fetch --all
+ 1683  git checkout develop
+ 1684  git pull origin develop
+ 1685  git checkout feature/skeleton
+ 1686  glola
+ 1687  git flow feature start event-user-participation
+ 1688  git pull origin feature/skeleton
+ 1689  git add .
+ 1690  git commit -m "admin path handling"
+ 1691  git push origin feature/event-user-participation
+ 1692  glola
+ 1693  sail artisan make:migration create_event_user_migration --create="event_user"
+ 1694  sail artisan migrate:fresh --seed
+ 1695  sail artisan make:migration create_organizer_migration --create="organizer"
+ 1696  sail artisan make:migration create_attendees_migration --create="attendees"
+ 1697  sail artisan make:migration create_member_migration --create="members"
+ 1698  sail artisan migrate:fresh --seed
+ 1699  glola
+ 1700  sail artisan migrate:fresh --seed
+ 1701  git add .
+ 1702  git commit -m "21/08/23"
+ 1703  git push origin feature/event-user-participation
+ 1704  sail down
+ 1705  git pull
+ 1706  git switch feature/skeleton
+ 1707  git checkout feature/skeleton
+ 1708  git checkout -f feature/skeleton
+ 1709  git pull 
+ 1710  sail up -d
+ 1711  sail yarn dev
+ 1712  git add .
+ 1713  git commit -m "merge handled & view flow control"
+ 1714  git push origin feature/skeleton
+ 1715  glola
+ 1716  git stash
+ 1717  git flow feature start staff
+ 1718  git switch feature/skeleton
+ 1719  git checkout feature/staff
+ 1720  git stash apply
+ 1721  git stash clear
+ 1722  git switch feature/skeleton
+ 1723  git switch -f feature/skeleton
+ 1724  git flow feature start staff
+ 1725  git flow -f feature start staff
+ 1726  git flow feature start staff-handling
+ 1727  git pull
+ 1728  git pull origin feature/skeleton
+ 1729  sail artisan migrate:fresh --seed
+ 1730  git add .
+ 1731  git commit -m "staff handling"
+ 1732  git push origin feature/staff-handling
+ 1733  sail artisan route::list
+ 1734  sail artisan route:list
+ 1735  git add .
+ 1736  git commit -m "staff & admin completed\nq
+ 1737  git commit -m "staff & admin completed"
+ 1738  git push origin feature/staff-handling
+ 1739  glola
+ 1740  git checkout feature/skeleton
+ 1741  git pull
+ 1742  sail artisan make:model Certification -m
+ 1743  sail artisan make:controller CertificationController
+ 1744  sail artisan migrate:fresh --seed
+ 1745  sail artisan make:model Expense -m
+ 1746  sail artisan migrate:fresh --seed
+ 1747  git add .
+ 1748  git commit -m "..."
+ 1749  git push origin feature/skeleton
+ 1750  git flow feature start test
+ 1751  git pull origin feature/skeleton
+ 1752  git push origin feature/test
+ 1753  git checkout feature/skeleton
+ 1754  git switch feature/test
+ 1755  git switch feature/skeleton
+ 1756  sail down
+ 1757  sail up
+ 1758  sail up -d
+ 1759  sail yarn de
+ 1760  sail yarn dev
+ 1761  sail down
+ 1762  sail yarn dev
+ 1763  sail up -d
+ 1764  sail yarn dev
+ 1765  git pull origin feature/skeleton
+ 1766  git switch develop
+ 1767  git add .
+ 1768  git commit -m "..."
+ 1769  git switch develop
+ 1770  git pull origin feature/skeleton
+ 1771  git add .
+ 1772  git commit -m "completed"
+ 1773  git push origin develop
+ 1774  git pull origin develop
+ 1775  git switch main
+ 1776  git pull origin main
+ 1777  sail artisan migrate:fresh --seed
+ 1778  git add .
+ 1779  git commmit -m "Seeder Fixed"
+ 1780  git commit -m "Seeder fixed"
+ 1781  git push origin main
+ 1782  sail down
+ 1783  fig
+ 1784  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1785  sail up -d
+ 1786  sail yarn dev
+ 1787  sail down
+ 1788  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1789  brew install fig
+ 1790  fig
+ 1791  brew install fig
+ 1792  fig
+ 1793  brew install fig
+ 1794  brew -f install fig
+ 1795  brew install fig
+ 1796  fig uninstall
+ 1797  cd ~/.local/bin
+ 1798  ls -l
+ 1799  rm fig
+ 1800  ls -l
+ 1801  cd ~/.fig
+ 1802  ls -l
+ 1803  cd ..
+ 1804  ls -l
+ 1805  rm ~/.fig
+ 1806  rm -r ~/.fig
+ 1807  ls -la
+ 1808  vim ~/.zshrc
+ 1809  brew install fig
+ 1810  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1811  cd Desktop
+ 1812  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/Lab06-RE .
+ 1813  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/Lab06-RE.tgz .
+ 1814  tar zxvf Lab06-RE.tgz
+ 1815  ls -l
+ 1816  cd Lab06-RE
+ 1817  grep --color [^A-G] no2.2.txt
+ 1818  grep --color "[^A-G]" no2.2.txt
+ 1819  flutter --version
+ 1820  flutter
+ 1821  flutter --version
+ 1822  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1823  fig
+ 1824  fig doctor
+ 1825  fig issue
+ 1826  fig restart
+ 1827  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1828  cd Lab06-RE
+ 1829  cd Desktop/
+ 1830  cd Lab06-RE/
+ 1831  grep --color -n '^\*[^\(\*\)]' asterisks.txt
+ 1832  grep --color -n '^\*' asterisks.txt
+ 1833  grep --color -n '^\*[^\*]' asterisks.txt
+ 1834  grep --color -n '^\*(?!.*\*)' asterisks.txt
+ 1835  grep --color -n '^\*[^*]*$' asterisks.txt
+ 1836  grep --color -n '\*\{1\}\*' asterisks.txt
+ 1837  grep --color -n '\*\.{1\}\*' asterisks.txt
+ 1838  grep --color -n '\*[^*]\*' asterisks.txt
+ 1839  grep --color -n '\*\{1,3\}' asterisks.txt
+ 1840  grep --color -n '\*\{1,3\}' asterisks.txt | grep --color -n '\*\{4,\}' 
+ 1841  grep --color -n '\*\{1,3\}' asterisks.txt | grep --color -nv '\*\{4,\}' 
+ 1842  grep '\*\{1,3\}' asterisks.txt | grep --color -nv '\*\{4,\}' 
+ 1843  grep --color -n '^\*\{1,\}' asterisks.txt
+ 1844  grep --color -n '^\(\*\{1,\}\)' asterisks.txt
+ 1845  grep --color -n '^\(\*\{1,\}\).*\1$' asterisks.txt
+ 1846  grep --color -n '^\(\*\{1,\}\).*[^\*]\1$' asterisks.txt
+ 1847  who
+ 1848  jdk
+ 1849  jdk --version
+ 1850  java --version
+ 1851  git init
+ 1852  git remote add origin https://github.com/Chayakorn2002/Lab05-Spring-Web-API-with-Spring-Data-JPA.git
+ 1853  git add .
+ 1854  git commit -m "Task completed"
+ 1855  git push origin main
+ 1856  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1857  fig restart
+ 1858  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1859  clear -x
+ 1860  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1861  fig
+ 1862  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1863  sail up -d
+ 1864  sail yarn dev
+ 1865  sail doen
+ 1866  sail down
+ 1867  sail up -d
+ 1868  sail yarn dev
+ 1869  sail artisan route:list
+ 1870  sail artisan route:list > x.txt
+ 1871  sail artisan route:list
+ 1872  sail artisan route:list >| x.txt
+ 1873  vim x.txt
+ 1874  cd Desktop/
+ 1875  cd ..
+ 1876  cd Documents/
+ 1877  cd CS442/03-laravel-layout-Kchanit/
+ 1878  ls -l
+ 1879  cls
+ 1880  clear -x
+ 1881  sail artisan route:list
+ 1882  sail artisan make:controller -h
+ 1883  sail artisan make:controller /Api/ArtistController -r --api --model=Artist
+ 1884  sail artisan route:list
+ 1885  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 1886  sail artisan route:list
+ 1887  sail artisan down
+ 1888  sail artisan up
+ 1889  sail down
+ 1890  npm install bootstrap@5.3.1
+ 1891  git init
+ 1892  defaults write -g ApplePressAndHoldEnabled -bool false
+ 1893  defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
+ 1894  docker run --name=mysql_kafe -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=kafe -p 3307:3306 -d mysql\n
+ 1895  fig restart
+ 1896  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1897  fig
+ 1898  clear 0x
+ 1899  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1900  fig
+ 1901  fig restart
+ 1902  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1903  vim .zshrc
+ 1904  cls
+ 1905  source ~/.zshrc
+ 1906  cls
+ 1907  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/infant .
+ 1908  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1909  cls
+ 1910  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1911  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/Lab07.tar.gz Documents/unix/
+ 1912  cd Documents/unix/
+ 1913  tar zxvf Lab07.tar.gz
+ 1914  ls -l
+ 1915  cd Lab07-sed/
+ 1916  ls -l
+ 1917  vim 10.sed
+ 1918  sed -f 10.sed 10.input
+ 1919  sed -f 10.sed `
+ 1920  sed -f 10.sed 
+ 1921  sed -f 10.sed 10.input
+ 1922  sed
+ 1923  cat 10.sed
+ 1924  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1925  ssh
+ 1926  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1927  iterm
+ 1928  แ
+ 1929  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1930  cls
+ 1931  docker
+ 1932  docker start 
+ 1933  docker
+ 1934  docker run --name=mysql_kafe -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=kafe -p 3307:3306 -d mysql
+ 1935  docker exec -it mysql_kafe bash
+ 1936  cls
+ 1937  docker exec -it mysql_kafe bash
+ 1938  git init
+ 1939  git add .
+ 1940  git commit -m "Signup and Login"
+ 1941  git remote add origin https://github.com/Chayakorn2002/Spring-MVC-Thymeleaf.git
+ 1942  git push origin main
+ 1943  git remote -h
+ 1944  git add .
+ 1945  git commit -m "DTO and One-To-Many"  
+ 1946  git push origin main
+ 1947  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1948  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/Lab07.tar.gz Desktop/
+ 1949  rm Desktop/Lab07.tar.gz
+ 1950  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/Lab07.tgz Desktop/
+ 1951  cls
+ 1952  git add .
+ 1953  git init
+ 1954  git add .
+ 1955  git commit -m "Completed"
+ 1956  git remote add origin https://github.com/Chayakorn2002/471-design-patterns.git
+ 1957  git push origin main
+ 1958  git add .
+ 1959  git commit -m "Package refactored"
+ 1960  git push origin main
+ 1961  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1962  cls
+ 1963  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1964  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/Lab07.tgz Documents/unix/
+ 1965  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/Lab06.tgz Documents/unix/
+ 1966  awk
+ 1967  sed
+ 1968  man sed
+ 1969  man awk
+ 1970  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/awk.tgz Documents/unix/
+ 1971  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 1972  fig restart
+ 1973  fig
+ 1974  fig restart
+ 1975  ls -l
+ 1976  cls
+ 1977  code .
+ 1978  node
+ 1979  node -v
+ 1980  npm install -g n
+ 1981  n lts
+ 1982  sudo -E env "PATH=$PATH" n stable
+ 1983  which n
+ 1984  where n
+ 1985  npm install -g n
+ 1986  where n
+ 1987  n
+ 1988  npm preix --global
+ 1989  npm prefix --global
+ 1990  which node
+ 1991  which npm
+ 1992  sudo npm i -g n
+ 1993  n
+ 1994  cd Documents/CS442
+ 1995  mkdir node101
+ 1996  cd node101
+ 1997  vode .
+ 1998  code .
+ 1999  fig
+ 2000  cls
+ 2001  node  server.js
+ 2002  node  server.js > a
+ 2003  cat a
+ 2004  node  server.js
+ 2005  cls
+ 2006  node  server.js
+ 2007  cls
+ 2008  node  server.js
+ 2009  cls
+ 2010  history
+ 2011  cls
+ 2012  node server.js
+ 2013  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 2014  sail up -d
+ 2015  code .
+ 2016  sail up -d
+ 2017  sail artisan make:command -h
+ 2018  sail artisan make:command UserCreator --command="app:user:create" 
+ 2019  sail artisan
+ 2020  cls
+ 2021  sail artisan
+ 2022  sail artisan app
+ 2023  sail artisan app:user:create -h
+ 2024  sail artisan app:user:create "Harry Potter --email="chayakorn.chi@ku.th"\n
+ 2025  sail artisan app:user:create "Harry Potter" --email="chayakorn.chi@ku.th"\n
+ 2026  cls
+ 2027  sail artisan app:user:create "Harry Potter" --email="chayakorn.chi@ku.th"\n
+ 2028  sail artisan app:user:create  --email="chayakorn.chi@ku.th"\n
+ 2029  sail artisan 
+ 2030  sail artisan app:user:create --email="chayakorn.chi@ku.th"\n
+ 2031  cls
+ 2032  sail artisan app:user:create --email="chayakorn.chi@ku.th"\n
+ 2033  sail down
+ 2034  cls
+ 2035  cd ..
+ 2036  cls
+ 2037  npx nuxi@latest init jam2o-11
+ 2038  fig
+ 2039  cd jam2o-11/
+ 2040  ls -l
+ 2041  code .
+ 2042  cls
+ 2043  sudo npm install -g n
+ 2044  n
+ 2045  which n
+ 2046  node
+ 2047  sudo n lts
+ 2048  node -v
+ 2049  sudo npm install -g n
+ 2050  npm bin -g
+ 2051  npm prefix -g\n
+ 2052  echo $HOME
+ 2053  cd Documents/
+ 2054  echo $HOME
+ 2055  cd ..
+ 2056  echo $PATH
+ 2057  pwd
+ 2058  vim .npm-global/
+ 2059  vim .zshrc
+ 2060  source ~/.zshrc
+ 2061  n
+ 2062  sudo n lts
+ 2063  node
+ 2064  node -v
+ 2065  cls
+ 2066  npm run dev
+ 2067  cd Documents/CS442/jam2o-11/
+ 2068  code .
+ 2069  sail up -d
+ 2070  code .
+ 2071  sail up -d
+ 2072  sail yarn dev
+ 2073  sail down
+ 2074  fig
+ 2075  fig restart
+ 2076  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2077  cls
+ 2078  fig
+ 2079  fig restart
+ 2080  cd Documents/SE/Springboot-demo/
+ 2081  idea .
+ 2082  vim .zshrc
+ 2083  source ~/.zshrc
+ 2084  idea .
+ 2085  vim .zshrc
+ 2086  idea .
+ 2087  source ~/.zshrc
+ 2088  idea
+ 2089  vim .zshrc
+ 2090  cls
+ 2091  source ~/.zshrc
+ 2092  idea
+ 2093  cd Documents/SE/Springboot-demo/
+ 2094  idea .
+ 2095  cd ../Springboot-demo2/
+ 2096  idea .
+ 2097  cd Documents/
+ 2098  cd SE/
+ 2099  git clone https://github.com/Chayakorn2002/CS471-Spring-MVC-Thymeleaf.git
+ 2100  cd CS471-Spring-MVC-Thymeleaf/
+ 2101  idea .
+ 2102  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2103  cls
+ 2104  idea .
+ 2105  cd Documents/
+ 2106  cd SE/
+ 2107  git clone https://github.com/ladyusa/wisdom-book.git
+ 2108  cd wisdom-book/
+ 2109  idea .
+ 2110  cd ..
+ 2111  rm wisdom-book/
+ 2112  rm -r wisdom-book/
+ 2113  git clone https://github.com/Chayakorn2002/CS471-wisdom-book.git
+ 2114  cd CS471-wisdom-book/
+ 2115  idea .
+ 2116  vim .zshrc
+ 2117  cd Documents/SE/CS471-wisdom-book/
+ 2118  ~/Document/SE/apache-maven-3.9.4/bin/mvn package -DskipTests
+ 2119  ~/Documents/SE/apache-maven-3.9.4/bin/mvn package -DskipTests
+ 2120  vim .zshrc
+ 2121  cd Documents/SE/CS471-wisdom-book/
+ 2122  mvn package -DskipTests
+ 2123  vim .zshrc
+ 2124  ls -la
+ 2125  docker build -t book-6410450117 .
+ 2126  mvn
+ 2127  mvn -version
+ 2128  vim .zshrc
+ 2129  source ~/.zshrc
+ 2130  mvn -version
+ 2131  mvn
+ 2132  vim .zshrc
+ 2133  mv apache-maven-3.9.4/ tools/
+ 2134  source ~/.zshrc
+ 2135  mvn
+ 2136  mvn -version
+ 2137  java
+ 2138  cls
+ 2139  history
+ 2140  cls
+ 2141  docker images
+ 2142  docker run --name book-6410450117 -P -d book-6410450117
+ 2143  docker logs book-6410450117
+ 2144  docker -s
+ 2145  docker ps
+ 2146  docker build https://github.com/Chayakorn2002/https://github.com/Chayakorn2002/CS471-wisdom-book.git -t book-6410450117:latest
+ 2147  docker build https://github.com/Chayakorn2002/CS471-wisdom-book.git -t book-6410450117:latest
+ 2148  docker build https://github.com/Chayakorn2002/CS471-wisdom-book.git\#main -t book-6410450117:latest\n
+ 2149  cd Documents/SE/CS471-wisdom-book/
+ 2150  ^@^@^@
+ 2151  cls
+ 2152  pwd
+ 2153  docker build https://github.com/Chayakorn2002/CS471-wisdom-book.git\#main -t book-6410450117:latest\n
+ 2154  docker tag book-6410450117 chayakorn2002/book-6410450117
+ 2155  docker login
+ 2156  docker push chayakorn2002/book-6410450117
+ 2157  docker image pull chayakorn2002/book-6410450117
+ 2158  docker run --name book-6410450117 -P  -d chayakorn2002/book-6410450117
+ 2159  docker ps
+ 2160  docker stop 0d2118605ecb
+ 2161  git add .
+ 2162  git commit -m "11 Sep task completed"
+ 2163  git push origin main
+ 2164  cls
+ 2165  cd Documents/SE/CS471-Spring-MVC-Thymeleaf/
+ 2166  idea .
+ 2167  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2168  cd Documents/CS442/jam2o-11/
+ 2169  code .
+ 2170  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 2171  code .
+ 2172  sail up -d
+ 2173  npm run dev
+ 2174  sail up -d
+ 2175  sail yarn dev
+ 2176  npm install @vueuse/nuxt
+ 2177  Last login: Mon Sep 11 17:58:30 on ttys000\n➜  ~  cd Documents/CS442/jam2o-11/\n➜  jam2o-11  code .\n➜  jam2o-11  sail up -d\nsh: vendor/bin/sail: No such file or directory\n➜  jam2o-11  npm run dev\n\n> dev\n> nuxt dev\n\nNuxt 3.7.0 with Nitro 2.6.2                                                                                                               8:06:22 AM\n                                                                                                                                          8:06:23 AM\n  ➜ Local:    http://localhost:3000/\n  ➜ Network:  use --host to expose\n\n✔ Nuxt DevTools is enabled v0.8.2 (experimental)                                                                                         8:06:24 AM\nℹ Vite client warmed up in 602ms                                                                                                         8:06:25 AM\n✔ Nitro built in 355 ms                                                                                                            nitro 8:06:25 AM\n^C%\n➜  jam2o-11  npm install @vueuse/nuxt\n\nadded 8 packages, and audited 910 packages in 8s\n\nfound 0 vulnerabilities\n➜  jam2o-11  npm install @vueuse/nuxt\n\n\n\n\n\n\n\n\n\n\n\n\n\ncls\n
+ 2178  npm install -D tailwindcss postcss autoprefixer
+ 2179  npx tailwindcss init
+ 2180  npm run dev
+ 2181  npm install flowbite
+ 2182  npm i -D daisyui@latest
+ 2183  npm run dev
+ 2184  npm run build
+ 2185  npm run dev
+ 2186  sail artisan make:controller /Api/SongController -r --api --model=Song
+ 2187  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 2188  glola
+ 2189  git status
+ 2190  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 2191  sail down
+ 2192  uptime
+ 2193  fig restart
+ 2194  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2195  cls
+ 2196  fig restart
+ 2197  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2198  fig
+ 2199  fig restart
+ 2200  cd Documents/unix
+ 2201  ls -l
+ 2202  cd awk
+ 2203  ls -l
+ 2204  cls
+ 2205  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2206  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/awk/data2.txt .
+ 2207  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2208  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/awk/data2.txt .
+ 2209  cls
+ 2210  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2211  cd Documents/unix/awk/
+ 2212  ls -l
+ 2213  cd ..
+ 2214  cd awk/
+ 2215  cd ..
+ 2216  rm awk
+ 2217  rm -r awk
+ 2218  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/awk .
+ 2219  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/awk.tgz .
+ 2220  ls -l
+ 2221  tar zxvf awk.tgz
+ 2222  ls -l
+ 2223  cd awk/
+ 2224  ls -l
+ 2225  cls
+ 2226  vim 6.awk
+ 2227  awk -f 6.awk data2.txt
+ 2228  vim 6.awk
+ 2229  awk -f 6.awk data2.txt
+ 2230  vim 6.awk
+ 2231  awk -f 6.awk data2.txt
+ 2232  vim 6.awk
+ 2233  awk -f 6.awk data2.txt
+ 2234  vim 6.awk
+ 2235  awk -f 6.awk data2.txt
+ 2236  vim 6.awk
+ 2237  cls
+ 2238  who
+ 2239  cls
+ 2240  vim 6.awk
+ 2241  awk -f 6.awk data2.txt
+ 2242  cat 6.awk
+ 2243  man awk
+ 2244  vim 7.awk
+ 2245  cd Documents/unix/awk/
+ 2246  vim 6.awk
+ 2247  vim 7.dat
+ 2248  cat 7.dat
+ 2249  vim 6.awk
+ 2250  man awk
+ 2251  vim 6.awk
+ 2252  awk -f 7.awk 7.dat
+ 2253  vim 7.awk
+ 2254  awk -f 7.awk 7.dat
+ 2255  vim 7.awk
+ 2256  awk -f 7.awk 7.dat
+ 2257  vim 7.awk
+ 2258  awk -f 7.awk 7.dat
+ 2259  vim 7.awk
+ 2260  awk -f 7.awk 7.dat
+ 2261  vim 7.awk
+ 2262  awk -f 7.awk 7.dat
+ 2263  vim 7.awk
+ 2264  awk -f 7.awk 7.dat
+ 2265  vim 7.awk
+ 2266  awk -f 7.awk 7.dat
+ 2267  vim 7.awk
+ 2268  awk -f 7.awk 7.dat
+ 2269  vim 7.awk
+ 2270  awk -f 7.awk 7.dat
+ 2271  vim 7.awk
+ 2272  awk -f 7.awk 7.dat
+ 2273  awk -f 7.awk 7.dat | cat -An
+ 2274  awk -f 7.awk 7.dat | cat -n
+ 2275  awk -f 7.awk 7.dat | cat -nA
+ 2276  awk -f 7.awk 7.dat | cat -n
+ 2277  man cp
+ 2278  cp 7.awk 8.awk
+ 2279  vim 8.awk
+ 2280  awk -f 8.awk 7.dat
+ 2281  vim 8.awk
+ 2282  awk -f 8.awk 7.dat
+ 2283  vim 8.awk
+ 2284  awk -f 8.awk 7.dat
+ 2285  vim 8.awk
+ 2286  awk -f 8.awk 7.dat
+ 2287  vim 8.awk
+ 2288  awk -f 8.awk 7.dat
+ 2289  vim 8.awk
+ 2290  awk -f 8.awk 7.dat
+ 2291  vim 8.awk
+ 2292  awk -f 8.awk 7.dat
+ 2293  vim 8.awk
+ 2294  awk -f 8.awk 7.dat
+ 2295  vim 8.awk
+ 2296  awk -f 8.awk 7.dat
+ 2297  vim 8.awk
+ 2298  awk -f 8.awk 7.dat
+ 2299  vim 8.awk
+ 2300  awk -f 8.awk 7.dat
+ 2301  vim 8.awk
+ 2302  awk -f 8.awk 7.dat
+ 2303  vim 8.awk
+ 2304  awk -f 8.awk 7.dat
+ 2305  vim 8.awk
+ 2306  awk -f 8.awk 7.dat
+ 2307  cls
+ 2308  cd Documents/unix/awk/
+ 2309  awk -f 6.awk data2.txt
+ 2310  man cat
+ 2311  awk -f 6.awk data2.txt | cat -t
+ 2312  man tr
+ 2313  awk -f 6.awk data2.txt | tr -s' '
+ 2314  awk -f 6.awk data2.txt | tr -s
+ 2315  awk -f 6.awk data2.txt | tr -s ' '
+ 2316  awk -f 6.awk data2.txt | tr -s '\t' | cat -t
+ 2317  awk -f 6.awk data2.txt | tr -s '' | cat -t
+ 2318  awk -f 7.awk 7.dat 
+ 2319  awk -f 8.awk 7.dat 
+ 2320  vim 8.awk
+ 2321  awk -f 8.awk 7.dat 
+ 2322  vim 8.awk
+ 2323  awk -f 8.awk 7.dat 
+ 2324  vim 8.awk
+ 2325  awk -f 8.awk 7.dat 
+ 2326  vim 8.awk
+ 2327  vim 9.awk
+ 2328  cd Documents/unix/awk/
+ 2329  ls -l
+ 2330  ls -l > 9.dat
+ 2331  awk -f 9.awk 9.dat
+ 2332  vim 9.awk
+ 2333  awk -f 8.awk 7.dat 
+ 2334  awk -f 9.awk 9.dat 
+ 2335  man awk
+ 2336  vim 9.awk
+ 2337  awk -f 9.awk 9.dat 
+ 2338  ls -l > wc
+ 2339  ls -l | wc
+ 2340  vim 9.awk
+ 2341  rm wc
+ 2342  awk -f 9.awk 9.dat 
+ 2343  vim 9.awk
+ 2344  awk -f 9.awk 9.dat 
+ 2345  vim 9.awk
+ 2346  awk -f 9.awk 9.dat 
+ 2347  cd Documents/unix/awk/
+ 2348  ls -l
+ 2349  ls -l *.awk
+ 2350  ls -l *.txt
+ 2351  ls -l *.txt | wc
+ 2352  ls -l *.awk | wc
+ 2353  ls -l *.dat | wc
+ 2354  ls -l *. | wc
+ 2355  ls -l *.READ | wc
+ 2356  ls -l *.README | wc
+ 2357  ls -l  | wc
+ 2358  ls -l
+ 2359  vim 9.awk
+ 2360  awk -f 9.awk 9.dat 
+ 2361  vim 9.awk
+ 2362  awk -f 9.awk 9.dat 
+ 2363  vim 9.awk
+ 2364  awk -f 9.awk 9.dat 
+ 2365  vim 9.awk
+ 2366  awk -f 9.awk 9.dat 
+ 2367  vim 9.awk
+ 2368  awk -f 9.awk 9.dat 
+ 2369  cat data2.txt
+ 2370  cat data3.txt
+ 2371  sort -k 4n, 4r data3.txt
+ 2372  sort -k 4n,4r data3.txt
+ 2373  awk 'NR > 1 { print }' your_file.txt | sort -k 4n,4r\n
+ 2374  awk 'NR > 1 { print }' data3.txt | sort -k 4n,4r\n
+ 2375  awk 'NR > 1 { print }'\n
+ 2376  awk 'NR > 1 { print }' data3.txt\n
+ 2377  awk 'NR > 0 { print }' data3.txt\n
+ 2378  awk 'NR > 1 {print}' data3.txt | sort -k 4n,4r | awk 'NR == 1 { max = $4; record = $0; next } $4 > max { max = $4; record = $0 } $4 == max { print record }'
+ 2379  vim 5_3.awk
+ 2380  sort -k 4n,4r data3.txt
+ 2381  cat data3.txt
+ 2382  sort -k 4n,4r data3.txt
+ 2383  sort -k 4n,4r data3.txt | awk -f 5_3.awk
+ 2384  vim 5_3.awk
+ 2385  sort -k 4n,4r data3.txt | awk -f 5_3.awk
+ 2386  vim 5_3.awk
+ 2387  sort -k 4n,4r data3.txt | awk -f 5_3.awk
+ 2388  vim 5_3.awk
+ 2389  sort -k 4n,4r data3.txt | awk -f 5_3.awk
+ 2390  vim 5_3.awk
+ 2391  sort -k 4n,4r data3.txt | awk -f 5_3.awk
+ 2392  vim 5_3.awk
+ 2393  vim 5_1.awk
+ 2394  cat data1.txt
+ 2395  cat data2.txt
+ 2396  awk -f 5_1.awk data2.txt
+ 2397  vim 5_2.awk
+ 2398  awk -f 5_2.awk data2.txt
+ 2399  sort -k 4n,4r data3.txt | awk -f 5_3.awk
+ 2400  vim 5_3.awk
+ 2401  vim 5_4.awk
+ 2402  awk -f 5_4.awk data2.txt
+ 2403  vim 5_4.awk
+ 2404  awk -f 5_4.awk data2.txt
+ 2405  vim 5_3.awk
+ 2406  vim 5_2.awk
+ 2407  awk -f 5_2.awk data2.txt
+ 2408  vim 5_2.awk
+ 2409  awk -f 5_2.awk data2.txt
+ 2410  vim 5_2.awk
+ 2411  vim 5_1.awk
+ 2412  awk -f 5_1.awk data2.txt
+ 2413  vim 6_1.awk
+ 2414  vim 6.awk
+ 2415  awk -f 6.awk data2.txt
+ 2416  vim 6.awk
+ 2417  vim 7.awk
+ 2418  awk -f 7.awk 7.dat 
+ 2419  awk -f 7.awk 
+ 2420  awk -f 7.awk 7.dat 
+ 2421  vim 8.awk
+ 2422  awk -f 7.awk 7.dat 
+ 2423  cls
+ 2424  vim 7.awk
+ 2425  vim 8.awk
+ 2426  ls -l
+ 2427  cd Assignment/
+ 2428  ls -l
+ 2429  cd ..
+ 2430  tar -cxvf Assignment
+ 2431  tar -czvf Assignment
+ 2432  tar -czvf awk.tqz Assignment
+ 2433  ls -l
+ 2434  awk -f 9.awk 9.dat 
+ 2435  ls -l >| 9.dat
+ 2436  awk -f 9.awk 9.dat 
+ 2437  rm awk.tqz
+ 2438  tar -czvf awk.tgz Assignment
+ 2439  rm awk.tgz
+ 2440  ls -l >| 9.dat
+ 2441  tar -czvf awk.tgz Assignment
+ 2442  awk -f 9.awk 9.dat 
+ 2443  ls -l >| 9.dat
+ 2444  awk -f 9.awk 9.dat 
+ 2445  cat 7.dat
+ 2446  cd Downloads/
+ 2447  rm -r 6410450133-08-awk/
+ 2448  tar -xzvf 6410450133-08-awk.tgz
+ 2449  ls -l 6410450133-08-awk.tgz
+ 2450  cls
+ 2451  ls -l
+ 2452  uptime
+ 2453  cd Documents/SE
+ 2454  git clone https://github.com/Chayakorn2002/wisdom-book-docker-compose.git
+ 2455  cd wisdom-book-docker-compose/
+ 2456  idea .
+ 2457  mvn clean package -DskipTests
+ 2458  docker-compose up -d
+ 2459  cls
+ 2460  docker ps
+ 2461  docker-compose ps
+ 2462  docker log
+ 2463  docker logs wisdom-book
+ 2464  docker logs wisdom-book | grep 'complete'
+ 2465  cls
+ 2466  docker exec -it mysql_book bash
+ 2467  docker exec -it docker-mysql-book bash
+ 2468  docker-compose down
+ 2469  cls
+ 2470  docker-compose up
+ 2471  docker-compose up -d
+ 2472  docker exec -it mysql_book bash
+ 2473  docker exec -it docker-mysql-book bash
+ 2474  docker-compose down
+ 2475  cls
+ 2476  cd ..
+ 2477  git clone https://github.com/Chayakorn2002/CS471-cucumber-shop.git
+ 2478  cd CS471-cucumber-shop
+ 2479  idea .
+ 2480  cls
+ 2481  cd
+ 2482  cd Documents/unix/awk/
+ 2483  ls -l
+ 2484  mkdir test
+ 2485  man cp
+ 2486  cp 7.dat test/7.dat
+ 2487  cp 9.dat test/9.dat
+ 2488  cp data2.txt test/data
+ 2489  cp data3.txt test/data2
+ 2490  cd test
+ 2491  cls
+ 2492  cat data
+ 2493  vim 5-1.awk
+ 2494  awk -f 5-1.awk data
+ 2495  vim 5-2.awk
+ 2496  awk -f 5-2.awk data
+ 2497  vim 5-3.awk
+ 2498  cd Documents/unix/awk
+ 2499  cd
+ 2500  cd Documents/unix/awk
+ 2501  cat 5_3.awk
+ 2502  awk -f 5-3.awk data2
+ 2503  vim 5-3.awk
+ 2504  awk -f 5-3.awk data2
+ 2505  vim 5-4.awk
+ 2506  awk -f 5-4.awk data
+ 2507  vim 5-4.awk
+ 2508  vim 5_4.awk
+ 2509  awk -f 5-4.awk data
+ 2510  cls
+ 2511  vim 6.awk
+ 2512  cat 6.awk
+ 2513  awk -f 6.awk data
+ 2514  vim 6.awk
+ 2515  cd Documents/CS442
+ 2516  git clone https://github.com/CS442-661/r-d-01-Chayakorn2002.git
+ 2517  cd r-d-01-Chayakorn2002
+ 2518  vim r-d-01.md
+ 2519  cd Documents/CS442
+ 2520  cd r-d-01-Chayakorn2002
+ 2521  vim r-d-01.md
+ 2522  cat r-d-01.md
+ 2523  cls
+ 2524  git add .
+ 2525  git commit -m "initial commit version 1.0.0"
+ 2526  git tag -a v1.0.0 -m "Version 1.0.0"\n
+ 2527  git push origin main
+ 2528  git add .
+ 2529  git commit -m "Image content's bug edited version 1.0.1"
+ 2530  git tag -a v1.0.1 -m "Version 1.0.1"\n
+ 2531  git push origin main
+ 2532  man awk
+ 2533  cd Documents/unix/awk
+ 2534  vim cmd_line.awk
+ 2535  awk -f cmd_line.awk a b c d e 
+ 2536  vim cmd_line.awk
+ 2537  awk -f cmd_line.awk a b c d e 
+ 2538  cls
+ 2539  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2540  cd Documents/unix/awk
+ 2541  cls
+ 2542  ls -l
+ 2543  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2544  month=`date +%m`; if (( month > 10 && month < 13) && (month > 0 && month < 3); then echo "it's winter"; elif (( month > 2 && month  < 7));  then echo "it's summer"; elif (( month > 6 && month < 11 )); echo "it's rainny"; fi
+ 2545  month=`date +%m`; if (( month > 10 && month < 13) && (month > 0 && month < 3); then echo "it's winter"; elif (( month > 2 && month  < 7));  then echo "it's summer"; elif (( month > 6 && month < 11 )); echo "it's rainny"; fimonth=`date +%m`; if (( month > 10 && month < 12) && (month > 0 && month\n
+ 2546  vim month.sh
+ 2547  chmod u+x month.sh
+ 2548  ./month.sh
+ 2549  vim month.sh
+ 2550  ./month.sh
+ 2551  vim month.sh
+ 2552  ./month.sh
+ 2553  vim month.sh
+ 2554  ./month.sh
+ 2555  vim month.sh
+ 2556  date
+ 2557  vim month.sh
+ 2558  ./month.sh
+ 2559  vim month.sh
+ 2560  ./month.sh
+ 2561  vim month.sh
+ 2562  ./month.sh
+ 2563  vim month.sh
+ 2564  vim month2.sh
+ 2565  ./month.sh
+ 2566  ./month2.sh
+ 2567  chmod u+x month2.sh
+ 2568  ./month2.sh
+ 2569  ps -f
+ 2570  last -w
+ 2571  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 2572  code .
+ 2573  sail up -d
+ 2574  cd Documents/CS442/jam2o-11/
+ 2575  npm run dev
+ 2576  cd Documents/CS442/jam2o-11/
+ 2577  code .
+ 2578  cls
+ 2579  vim ./zshrc
+ 2580  cd
+ 2581  vim ./zshrc
+ 2582  vim .zshrc
+ 2583  ls -l
+ 2584  cd
+ 2585  ls -la
+ 2586  vim .bashrc
+ 2587  vim .zshrc
+ 2588  npm run dev
+ 2589  vim .zshrc
+ 2590  mvn
+ 2591  mvmn --version
+ 2592  mvm --version
+ 2593  mn --version
+ 2594  mvn -version
+ 2595  sail composer require tymon/jwt-auth
+ 2596  sail artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+ 2597  sail artisan jwt:secret
+ 2598  sail artisan make:controller /Api/AuthController
+ 2599  cd Documents/CS442/
+ 2600  mkdir final
+ 2601  cd final/
+ 2602  git clone https://github.com/nopnapatn/pet-care-backend.git
+ 2603  git clone https://github.com/nopnapatn/pet-care-frontend.git
+ 2604  sail artisan make:controller /Api/PlaylistController
+ 2605  sail artisan make:controller /Api/PlaylistController -r --api --model=Playlist
+ 2606  sail down
+ 2607  cls
+ 2608  cd Documents/unix/awk/test/
+ 2609  ls -l
+ 2610  vim 6.awk
+ 2611  awk -f 6.awk data
+ 2612  cd Documents/unix/awk/test/
+ 2613  vim 6.awk
+ 2614  awk -f 6.awk data
+ 2615  vim 6.awk
+ 2616  awk -f 6.awk data
+ 2617  awk -f 6.awk data | cat -A
+ 2618  awk -f 6.awk data | cat -t
+ 2619  awk -f 6.awk data | trim -s
+ 2620  man trim
+ 2621  awk -f 6.awk data | tr -s' '
+ 2622  awk -f 6.awk data | tr -s ' '
+ 2623  awk -f 6.awk data
+ 2624  vim 6.awk
+ 2625  awk -f 6.awk data
+ 2626  awk -f 6.awk data | tr -s '\t'
+ 2627  vim 6.awk
+ 2628  awk -f 6.awk data | tr -s '\t'
+ 2629  vim 6.awk
+ 2630  awk -f 6.awk data | tr -s '\t'
+ 2631  cd Documents/unix/awk
+ 2632  cat 6.awk
+ 2633  vim 6.awk
+ 2634  vim 7.awk
+ 2635  man awk
+ 2636  awk -f 7.awk
+ 2637  vim 6.awk
+ 2638  vim 7.awk
+ 2639  awk -f 7.awk
+ 2640  awk -f 7.awk | cat
+ 2641  awk -f 7.awk | less
+ 2642  vim 7.awk
+ 2643  cat 7.awk
+ 2644  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2645  cd Documents/unix/awk
+ 2646  ls -l
+ 2647  vim 6.awk
+ 2648  vim 7.awk
+ 2649  vim 8.awk
+ 2650  awk -f 8.awk 7.dat 
+ 2651  awk -f 7.awk 7.dat 
+ 2652  vim 8.awk
+ 2653  cat 8.awk
+ 2654  cat 7.dat
+ 2655  cls
+ 2656  cat 7.dat
+ 2657  cat 8.awk
+ 2658  cls
+ 2659  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2660  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/sed.tgz Documents/unix
+ 2661  cd Documents/unix
+ 2662  tar -xzvf sed.tgz
+ 2663  csl
+ 2664  cls
+ 2665  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2666  \n\n\n\n\n
+ 2667  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2668  cd Lab07-sed
+ 2669  ls -l
+ 2670  cd exam
+ 2671  ls -l
+ 2672  vim 9.sed
+ 2673  cls
+ 2674  sed -f 9.sed 9.c
+ 2675  cat 9.
+ 2676  cat 9.c
+ 2677  cat 9.sed
+ 2678  grep '/\*[^*]*\*/' 9.c
+ 2679  grep '*' 9.c
+ 2680  cls
+ 2681  vim 9.sed
+ 2682  sed -f 9.sed 9.c
+ 2683  cd Documents/unix/awk
+ 2684  ls -l
+ 2685  cd test
+ 2686  ls -l
+ 2687  cd ..
+ 2688  mkdir exam
+ 2689  cd test
+ 2690  cd ..
+ 2691  cp 7.dat 9.dat data2.txt data3.txt exam
+ 2692  cd exam
+ 2693  ls -l
+ 2694  mv data2.txt data
+ 2695  cd ..
+ 2696  cp 1.txt 2.txt 3.txt 4.txt exam
+ 2697  cd exam
+ 2698  ls -l
+ 2699  cat 1.txt
+ 2700  cat -nA 1.txt
+ 2701  cat -n 1.txt
+ 2702  awk 'NR <= 20 {print}' 1.txt
+ 2703  awk '{print NF}' 2.txt
+ 2704  awk 'NF' 2.txt
+ 2705  awk '{NF}' 2.txt
+ 2706  awk '{print NF}' 2.txt
+ 2707  cls
+ 2708  awk '/UNIX/' 3.txt
+ 2709  awk 'UNIX' 3.txt
+ 2710  awk '/UNIX/' 3.txt
+ 2711  cat 3.txt
+ 2712  csl
+ 2713  cls
+ 2714  awk '{print $1, $3}' 4.txt
+ 2715  awk '{printf "%d, %d", %1, %3}' 4.txt
+ 2716  awk '{printf "%d, %d", $1, $3}' 4.txt
+ 2717  awk '{printf "sd, %s", $1, $3}' 4.txt
+ 2718  awk '{printf "%s, %s", $1, $3}' 4.txt
+ 2719  awk '{printf "%s, %s\n", $1, $3}' 4.txt
+ 2720  cat 4.txt
+ 2721  vim 4.txt
+ 2722  sed 's/^$//' 4.txt
+ 2723  sed '/^$/d' 4.txt
+ 2724  sed '/^$/d' 4.txt > 4.txt
+ 2725  cat 4.txt
+ 2726  vim 4.txt
+ 2727  cls
+ 2728  cat data
+ 2729  fig restart
+ 2730  awk '$4 == 0 {printf "%s %s", $1, $2}' data
+ 2731  awk '$3 > 15.0 {printf "%s", $0}' data
+ 2732  awk '$3 > 15.0 {printf "%s\n", $0}' data
+ 2733  awk 'NR > 1 & $3 > 15.0 {printf "%s\n", $0}' data
+ 2734  awk 'NR > 1 && $3 > 15.0 {printf "%s\n", $0}' data
+ 2735  cls
+ 2736  cat data3.txt
+ 2737  sort -k 4n,4r data3.txt
+ 2738  cd Documents/unix/awk/
+ 2739  ls -l
+ 2740  cat 5_3.awk
+ 2741  vim 5-3.awk
+ 2742  sort -k 4n,4r data3.txt | awk -f 5-3.awk
+ 2743  vim 5-3.awk
+ 2744  sort -k 4n,4r data3.txt | awk -f 5-3.awk
+ 2745  cls
+ 2746  vim 5-4.awk
+ 2747  awk -f 5-4.awk data
+ 2748  vim 5-4.awk
+ 2749  awk -f 5-4.awk data
+ 2750  vim 6.awk
+ 2751  man awk
+ 2752  awk -f 6.awk data | tr -s '\t'
+ 2753  vim 6.awk
+ 2754  awk -f 6.awk data | tr -s '\t'
+ 2755  vim 6.awk
+ 2756  awk -f 6.awk data | tr -s '\t'
+ 2757  vim 6.awk
+ 2758  awk -f 6.awk data | tr -s '\t'
+ 2759  vim 6.awk
+ 2760  cat 6.awk
+ 2761  awk -f 6.awk data
+ 2762  awk -f 6.awk data | tr -s ''
+ 2763  cat 7.dat
+ 2764  cls
+ 2765  vim 7.awk
+ 2766  cat 7.dat
+ 2767  cd ..
+ 2768  cat 7.awk
+ 2769  man awk
+ 2770  awk -f 7.awk 7.dat 
+ 2771  vim 7.awk
+ 2772  cd exam/
+ 2773  vim 7.awk
+ 2774  awk -f 7.awk 7.dat 
+ 2775  cat 7.awk
+ 2776  vim 7.awk
+ 2777  awk -f 7.awk 7.dat 
+ 2778  vim 8.aw
+ 2779  vim 8.awk
+ 2780  cls
+ 2781  cp 7.awk 8.awk
+ 2782  vim 8.awk
+ 2783  cat 8.awk
+ 2784  cls
+ 2785  awk -f 8.awk 7.dat 
+ 2786  vim 8.awk
+ 2787  awk -f 8.awk 7.dat 
+ 2788  vim 8.awk
+ 2789  cat 8.awk
+ 2790  awk -f 8.awk 7.dat 
+ 2791  vim 8.awk
+ 2792  awk -f 8.awk 7.dat 
+ 2793  vim 8.awk
+ 2794  awk -f 8.awk 7.dat 
+ 2795  cls
+ 2796  history | less
+ 2797  vim 9.awk
+ 2798  cat 9.dat
+ 2799  ls -l > 9.dat
+ 2800  vat 9.
+ 2801  vat 9.dat
+ 2802  cat 9.dat
+ 2803  cd exam/
+ 2804  ls -l
+ 2805  cat 9.dat
+ 2806  cd ..
+ 2807  cat 9.awk
+ 2808  man awk
+ 2809  cd Documents/unix/awk/
+ 2810  cd Documents/unix/Lab07-sed
+ 2811  ls -l
+ 2812  cat 1.7
+ 2813  grep '\(\<.*\>\).*\<\1\>' 1.7
+ 2814  grep '\(\<.*\>\).\<\1\>' 1.7
+ 2815  grep '\(\<.*\>\)\<\1\>' 1.7
+ 2816  grep '\(\<.*\>\).*\<\1\>' 1.7
+ 2817  grep '\(\<.*\>\).*\<\1\>.*\<\1\>' 1.7
+ 2818  vim ~/.zshrc
+ 2819  vim ~/.zshrc.
+ 2820  sed 's/\(\<.*\>\).*\<\1\>/\1/g' 1.7
+ 2821  sed 's/\(\<.*\>\)\<\1\>/\1/g' 1.7
+ 2822  sed 's/\(\<.*\>\).*\<\1\>/\1/g' 1.7
+ 2823  sed 's/\b\([a-zA-z]\+]\)\b\1/\1/g' 1.7
+ 2824  sed 's/\b\([a-zA-z]\+]\)\1\b/\1/g' 1.7
+ 2825  sed 's/\b\([a-zA-Z]\+\) \1\b/\1/g' 1.7
+ 2826  ls -l
+ 2827  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 2828  sed 's/\(\<.*\>\).*\<\1\>/\1/g' 1.7
+ 2829  cls
+ 2830  cat 1.7
+ 2831  cat 9.awk
+ 2832  cd Documents/unix/awk
+ 2833  vim 9-1.awk
+ 2834  cls
+ 2835  vim 9-1.awk
+ 2836  cls
+ 2837  cat 10.output
+ 2838  cls
+ 2839  /var/folders/mq/3xk_39ls3c9_m0794_34mcs40000gn/T/multipass-gui.coNeYP.command ; exit;
+ 2840  who
+ 2841  cd Documents/unix/awk
+ 2842  ls -l
+ 2843  cd Documents/unix/awk
+ 2844  ls -l
+ 2845  cd Documents/unix/awk
+ 2846  ls -l
+ 2847  cat 9.awk
+ 2848  cd Documents/unix/awk
+ 2849  cat 9.awk
+ 2850  ls -l | awk -f 9.awk
+ 2851  cls
+ 2852  cd Documents/CS442/final
+ 2853  cd pet-care-frontend
+ 2854  cls
+ 2855  git pull
+ 2856  code .
+ 2857  npm run dev
+ 2858  npm install
+ 2859  npm run dev
+ 2860  git switch develop
+ 2861  git checkout develop
+ 2862  npm run dev
+ 2863  npm install
+ 2864  npm run dev
+ 2865  cls
+ 2866  cd Documents/CS442/final/pet-care-backend
+ 2867  code .
+ 2868  sail up -d
+ 2869  docker run --rm \\n    -u "$(id -u):$(id -g)" \\n    -v "$(pwd):/var/www/html" \\n    -w /var/www/html \\n    laravelsail/php82-composer:latest \\n    composer install --ignore-platform-reqs
+ 2870  git pull
+ 2871  mv Downloads/env Documents/CS442/final/pet-care-backend
+ 2872  sail up -d
+ 2873  sail yarn dev
+ 2874  sail yarn install
+ 2875  sail yarn dev
+ 2876  cd Documents/CS442/final/pet-care-frontend
+ 2877  code .
+ 2878  npm run dev
+ 2879  git branch
+ 2880  git pull
+ 2881  git switch feature/register
+ 2882  npm run dev
+ 2883  git switch feature/db
+ 2884  git echeckout feature/db
+ 2885  git checkout feature/db
+ 2886  git pull
+ 2887  git checkout feature/db
+ 2888  git checkout .
+ 2889  git checkout feature/db
+ 2890  git checkout -force feature/db
+ 2891  git checkout --force feature/db
+ 2892  cd Documents/CS442/jam2o-11
+ 2893  code .
+ 2894  cd Documents/CS442/03-laravel-layout-Chayakorn2002
+ 2895  code .
+ 2896  cd ../03-laravel-layout-Kchanit
+ 2897  cd ..
+ 2898  cd ../03-laravel-layout-Kchanit; code .
+ 2899  cd ../03-laravel-layout-Kchanit | code .
+ 2900  cd ../03-laravel-layout-Kchanit
+ 2901  cd 03-laravel-layout-Kchanit; code .
+ 2902  codee .
+ 2903  code .
+ 2904  git pull
+ 2905  sail yarn dev
+ 2906  code .
+ 2907  npm run dev
+ 2908  code .
+ 2909  sail composer require tymon/jwt-auth
+ 2910  code .
+ 2911  sail yarn dev
+ 2912  sail down
+ 2913  sail up -d
+ 2914  sail artisan migrate:fresh --seed
+ 2915  git pull
+ 2916  npm run dev
+ 2917  git pull
+ 2918  npm run dev
+ 2919  code .
+ 2920  history > a
+ 2921  cat a > grep 'sail'
+ 2922  cat a | grep 'sail'
+ 2923  sail artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+ 2924  sail artisan jwt:secret
+ 2925  code .
+ 2926  sail artisan jwt:secret
+ 2927  npm run dev
+ 2928  code .
+ 2929  git pull
+ 2930  glola
+ 2931  npm run dev
+ 2932  cd Documents/CS442/eventnie
+ 2933  code .
+ 2934  npm install vee-validate@next
+ 2935  npm run dev
+ 2936  npm install @nuxtjs/auth @nuxtjs/axios
+ 2937  sail down 
+ 2938  cls
+ 2939  npm install @nuxtjs/auth @nuxtjs/axios
+ 2940  npm install @nuxtjs/auth-next @nuxtjs/axios
+ 2941  npm install --exact @nuxtjs/auth-next
+ 2942  code .
+ 2943  npm install --exact @nuxtjs/auth-next
+ 2944  code .
+ 2945  npm install @nuxtjs/auth-next @nuxtjs/axios
+ 2946  npm install --save-exact @nuxtjs/auth-next @nuxtjs/axios
+ 2947  npx nuxt -v
+ 2948  npm install --save-exact @nuxtjs/auth-next @nuxtjs/axios
+ 2949  code .
+ 2950  npm run dev
+ 2951  git commit --hard
+ 2952  git commit -hard
+ 2953  git reset -hard
+ 2954  git reset --hard
+ 2955  sail up -d
+ 2956  npm install vee-validate --save 
+ 2957  npm v vue
+ 2958  npm list | grep vue@
+ 2959  npm list
+ 2960  npm install @vuelidate/core @vuelidate/validators
+ 2961  npm run dev
+ 2962  code .
+ 2963  cls
+ 2964  sail down
+ 2965  cls
+ 2966  code .
+ 2967  sail up -d
+ 2968  cls
+ 2969  npm run dev
+ 2970  code .
+ 2971  npm run dev
+ 2972  cls
+ 2973  sail up -d
+ 2974  npm run dev
+ 2975  sail up -d
+ 2976  npm install ts-form-validation
+ 2977  code .
+ 2978  npm run dev
+ 2979  npm install @formkit/vue@next
+ 2980  code .
+ 2981  npm run dev
+ 2982  npm install @formkit/nuxt
+ 2983  npm run dev
+ 2984  git add .
+ 2985  git commit -m "Register/Login field validation" 
+ 2986  git push origin feature/register
+ 2987  sail down
+ 2988  java -jar jenkins.war --httpPort=9090
+ 2989  java --version
+ 2990  java
+ 2991  cls
+ 2992  java -jar jenkins.war --httpPort=9090
+ 2993  cls
+ 2994  mvn
+ 2995  mvn -version
+ 2996  cls
+ 2997  cd Documents/SE
+ 2998  ls -l
+ 2999  cd CS471-wisdom-book
+ 3000  ls -l
+ 3001  cd target
+ 3002  ls -l
+ 3003  java -jar jenkins.war --httpPort=9090
+ 3004  cls
+ 3005  cd Documents/CS442/
+ 3006  git clone https://github.com/CS442-661/r-d-02-Chayakorn2002.git
+ 3007  cd r-d-02-Chayakorn2002
+ 3008  cd Documents/CS442/r-d-01-Chayakorn2002
+ 3009  ls -l
+ 3010  vim r-d-02.md
+ 3011  touch r-d-02.md
+ 3012  cd ../r-d-02-Chayakorn2002
+ 3013  touch r-d-02.md
+ 3014  git add .
+ 3015  git commit -m "initial commit version 2.0.0"" \n
+ 3016  git commit -m "initial commit version 2.0.0"\n
+ 3017  git tag -a v2.0.0 -m "Version 2.0.0"\n
+ 3018  git push origin main
+ 3019  cls
+ 3020  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3021  cls
+ 3022  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3023  code .
+ 3024  npm run dev
+ 3025  sail up -d
+ 3026  npm run dev
+ 3027  cd Documents/CS442/r-d-02-Chayakorn2002
+ 3028  ls -l
+ 3029  ls -la
+ 3030  rm .r-d-02.md.swp
+ 3031  ls -l
+ 3032  git add .
+ 3033  git commit -m "version 2.0.1"
+ 3034  git tag -a v2.0.1 -m "Version 2.0.1"
+ 3035  git push origin tag v2.0.1
+ 3036  git push origin main
+ 3037  cls
+ 3038  npm install @vueuse/nuxt
+ 3039  npm install pinia @pinia/nuxt
+ 3040  npm install pinia @pinia/nuxt -f
+ 3041  npm run dev
+ 3042  npm i -D @pinia-plugin-persistedstate/nuxt
+ 3043  npm run dev
+ 3044  code .
+ 3045  sail down
+ 3046  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3047  cls
+ 3048  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3049  uptime
+ 3050  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3051  man date
+ 3052  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/shell_script/ss16410450117.tgz Documents/unix
+ 3053  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/shell_script/ss1-6410450117.tgz Documents/unix
+ 3054  cd Documents/unix/
+ 3055  ls -l
+ 3056  tar -xzvf ss1-6410450117.tgz
+ 3057  ls -l
+ 3058  cd HW-1/
+ 3059  ls -l
+ 3060  cd ..
+ 3061  rm ss1-6410450117.tgz
+ 3062  rm -r HW-1/
+ 3063  ls -l
+ 3064  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/shell_script/ss1-6410450117.tgz Documents/unix
+ 3065  tar -xzvf ss1-6410450117.tgz
+ 3066  ls -l
+ 3067  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/shell_script/ss1-6410450117.tgz Documents/unix
+ 3068  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/shell_script/ss1-6410450117.tgz .
+ 3069  ls -l
+ 3070  tar -xzvf ss1-6410450117.tgz
+ 3071  ls -l
+ 3072  cd Documents/unix/
+ 3073  ls -l
+ 3074  cd ss1-6410450117/
+ 3075  ./1.sh 4 -6
+ 3076  vim ./1.sh
+ 3077  ./1.sh 4 -6
+ 3078  vim ./1.sh
+ 3079  cat 1.sh
+ 3080  idea .
+ 3081  แสห
+ 3082  cls
+ 3083  uptime
+ 3084  code .
+ 3085  git init
+ 3086  git add .
+ 3087  git commit -m "Project reinitialized"
+ 3088  git remote add origin https://github.com/Chayakorn2002/interesting-football-topic-analyzing.git
+ 3089  git push origin main
+ 3090  uptime
+ 3091  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3092  cd Documents/CS442/03-laravel-layout-Kchanit
+ 3093  cd Documents/CS442/jam2o-11
+ 3094  npm run dev
+ 3095  sail up -d
+ 3096  code .
+ 3097  sail up -d
+ 3098  npm run dev
+ 3099  code .
+ 3100  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3101  cls
+ 3102  sail down
+ 3103  sail up -d
+ 3104  curl ipv4.icanhazip.com
+ 3105  yarn run dev
+ 3106  cls
+ 3107  sail yarn dev
+ 3108  sail composer require linecorp/line-bot-sdk
+ 3109  sail artisan make:controller /Api/LineBotController
+ 3110  sail artisan make:controller /Api/LineBotController -r
+ 3111  sail artisan make:controller /Api/LineBotController -r --api
+ 3112  cd Documents/CS442/03-laravel-layout-Chayakorn2002
+ 3113  sail redis
+ 3114  cd ../03-laravel-layout-Kchanit
+ 3115  sail redis
+ 3116  sail artisan tinker
+ 3117  curl ipv4.icanhazip.com
+ 3118  sail yar build
+ 3119  sail yarn build
+ 3120  sail yarn dev
+ 3121  sail yarn build
+ 3122  sail yarn dev
+ 3123  sail down
+ 3124  sail up -d
+ 3125  sail down
+ 3126  sail up -d
+ 3127  sail down
+ 3128  sail up -d
+ 3129  sail down
+ 3130  sail up -d
+ 3131  php "/Users/chayakorn/Documents/CS442/03-laravel-layout-Kchanit/app/Http/Controllers/Api/LineBotController.php"
+ 3132  sail down
+ 3133  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3134  scp 6410450117@sukreep.cs.sci.ku.ac.th:/home/6410450117/shell_script/ss2-6410450117/ss2-6410450117.tgz Documents/unix
+ 3135  cd Documents/unix
+ 3136  ls -l
+ 3137  tar -xzvf ss2-6410450117.tgz
+ 3138  ls -l
+ 3139  cd ss2-6410450117
+ 3140  ls -l
+ 3141  chmod u+x 1.sh
+ 3142  chmod u+x 2.sh
+ 3143  chmod u+x 3.sh
+ 3144  ls -l
+ 3145  cat 1.sh
+ 3146  cd Documents/unix
+ 3147  cd ../CS442/03-laravel-layout-Kchanit/
+ 3148  ls -l
+ 3149  cd ..
+ 3150  cd final
+ 3151  ls -l
+ 3152  cd pet-care-frontend
+ 3153  cd Documents/CS442/final/pet-care-backend
+ 3154  code .
+ 3155  sail up -d
+ 3156  sail down
+ 3157  git pull
+ 3158  git reset --hard
+ 3159  git pull
+ 3160  sail yarn dev
+ 3161  sail up -d
+ 3162  sail yarn dev
+ 3163  cls
+ 3164  sail down
+ 3165  cd Documents/SE
+ 3166  ls -l
+ 3167  mv CS471-Spring-MVC-Thymeleaf CS471-Spring-MVC-Thymeleaf-1
+ 3168  ls -l
+ 3169  git clone https://github.com/Chayakorn2002/CS471-Spring-MVC-Thymeleaf.git
+ 3170  cd CS471-Spring-MVC-Thymeleaf
+ 3171  idea .
+ 3172  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3173  cls
+ 3174  echo -e "hello\nworld\a"
+ 3175  man echo
+ 3176  echo  "hello\nworld\a"
+ 3177  echo  "hello\nworld"
+ 3178  echo  "hello\nworld\s"
+ 3179  echo  "hello\nworld\a"
+ 3180  echo  "hello\nworld"
+ 3181  echo  "hello\nworld\a"
+ 3182  echo  "hello\nworld"
+ 3183  echo  "hello\nworld\a"
+ 3184  echo  "hello\nworld"
+ 3185  echo  "hello\nworld\a"
+ 3186  echo  "hello\nworld"
+ 3187  echo  "hello\nworld\a"
+ 3188  echo  "hello\nworld"
+ 3189  echo  "hello\nworld\a"
+ 3190  git reset --hard
+ 3191  git pull
+ 3192  idea .
+ 3193  git checkout b9c191ce5ceb048ff0c9cf3a0dff60e844efbafd
+ 3194  git switch -c bug-fixed
+ 3195  docker run --name=mysql_kafe -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=kafe -p 3307:3306 -d mysql
+ 3196  docker exec -it mysql_kafe bash\n
+ 3197  git init
+ 3198  git add .
+ 3199  git commit -m "Authentication"
+ 3200  git remote add origin https://github.com/Chayakorn2002/CS471-Web-Development-with-Spring-MVC-Thymeleaf.git
+ 3201  git push origin main
+ 3202  docker run --name=mysql_kafe -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=kafe -p 3307:3306 -d mysql
+ 3203  git add .
+ 3204  git commit -m "Menu, Category handle"
+ 3205  git push origin main
+ 3206  docker exec -it mysql_kafe bash\n
+ 3207  git add .
+ 3208  git commit "Order, Admin handling"
+ 3209  git commit -m "Order, Admin handling"
+ 3210  git push origin main
+ 3211  cd Documents/SE
+ 3212  ls -l
+ 3213  cd wisdom-book๕
+ 3214  cd wisdom-book*
+ 3215  cd wisdom-book.*
+ 3216  ls -l | grep wisdom.*
+ 3217  ls -l | grep 'wisdom.*'
+ 3218  ls -l | grep 'wisdom'
+ 3219  ls -l | grep 'wisdom.*'
+ 3220  ls -l | grep 'wisdom.'
+ 3221  ls -l | grep 'wisdom-book-docker-compose'
+ 3222  ls -l | grep 'drwxr*'
+ 3223  cd ..
+ 3224  cd wisdom-book-docker-compose/
+ 3225  idea .
+ 3226  cd ../CS471-wisdom-book/
+ 3227  idea .
+ 3228  cd ..
+ 3229  ls -l
+ 3230  cd CS471-cucumber-shop/
+ 3231  idea .
+ 3232  cd Documents/SE
+ 3233  ls -l
+ 3234  git clone https://github.com/Chayakorn2002/CS471-cucumber-atm.git
+ 3235  git add .
+ 3236  git commit -m "Stock feature handling"
+ 3237  git push origin main
+ 3238  git push origin master
+ 3239  cd CS471-cucumber-atm
+ 3240  idea .
+ 3241  git add .
+ 3242  git commit -m "Deposit Handling"
+ 3243  git push origin master
+ 3244  uptime
+ 3245  who
+ 3246  whp
+ 3247  who
+ 3248  ls -l
+ 3249  who
+ 3250  cd Documents/CS442/final/pet-care-backend
+ 3251  code .
+ 3252  git pull
+ 3253  sail artisan migrate:fresh --seed
+ 3254  cd Documents/CS442/final/pet-care-frontend/
+ 3255  code .
+ 3256  git switch develop
+ 3257  git pull
+ 3258  npm run dev
+ 3259  npm install @pinia/nuxt\n
+ 3260  npm run dev
+ 3261  sail ip -d
+ 3262  sail up -d
+ 3263  git flow feature start profile
+ 3264  git checkout feature/profile
+ 3265  git branch -b /feature/profile
+ 3266  git checkout -b feature/profile
+ 3267  sail artisan make:controller /Api/ProfileController -r --api
+ 3268  git checkout -b feature/profile
+ 3269  cd Documents/CS442/jam2o-11/
+ 3270  code .
+ 3271  npm run dev
+ 3272  sail down
+ 3273  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 3274  code .
+ 3275  sail up -d
+ 3276  sail down
+ 3277  sail up -d
+ 3278  npm install pinia
+ 3279  npm run dev
+ 3280  sail down
+ 3281  code .
+ 3282  sail up -d
+ 3283  code .
+ 3284  cls
+ 3285  npm run dev
+ 3286  code .
+ 3287  sail yarn dev
+ 3288  sail up -d
+ 3289  sail down
+ 3290  sail up -d
+ 3291  sail yarn dev
+ 3292  sail doqn
+ 3293  sail down
+ 3294  sail up -d
+ 3295  sail donw
+ 3296  sail down
+ 3297  sail up -d
+ 3298  sail down
+ 3299  sail up -d
+ 3300  sail artisan migrate:fresh --seed
+ 3301  php artisan storage:link
+ 3302  sail artisan storage:link
+ 3303  sail artisan migrate:fresh --seed
+ 3304  npm run dev
+ 3305  npm install pinia
+ 3306  npm run dev
+ 3307  sail up -d
+ 3308  npm run dev
+ 3309  sail down
+ 3310  sail down
+ 3311  sail up -d
+ 3312  npm run dev
+ 3313  sail down
+ 3314  sail up -d
+ 3315  npm run dev
+ 3316  sail down
+ 3317  uptime
+ 3318  cls
+ 3319  cd Documents/CS442/final/pet-care-frontend/
+ 3320  cd Documents/CS442/final/pet-care-backend
+ 3321  sail up -d
+ 3322  code .
+ 3323  npm run dev
+ 3324  sail up -d
+ 3325  code .
+ 3326  npm run dev
+ 3327  git add .
+ 3328  git commit -m "[👤] Profile edit & display completed"
+ 3329  git remote 
+ 3330  git remote -r
+ 3331  git remote -v
+ 3332  git remote -h
+ 3333  git push origin feature/profile
+ 3334  git add .
+ 3335  git commit -m "[👤] User's profile show and update : api call (with image handling)"
+ 3336  git remote -v
+ 3337  git push origin feature/profile
+ 3338  sail down
+ 3339  man 7 signal
+ 3340  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3341  mv Documents/CS442/final Desktop
+ 3342  cls
+ 3343  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3344  cd Desktop/pet-care-backend
+ 3345  cd Desktop/pet-care-frontend
+ 3346  code .
+ 3347  \tnpm run dev
+ 3348  sail up -d
+ 3349  code .
+ 3350  git pull
+ 3351  git checkout feature/dashboard
+ 3352  git pull
+ 3353  git checkout feature/db
+ 3354  \tnpm run dev
+ 3355  npm install
+ 3356  \tnpm run dev
+ 3357  git pull
+ 3358  sail artisan migrate:fresh --seed
+ 3359  sail down
+ 3360  uptime
+ 3361  ls -l
+ 3362  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3363  omz update
+ 3364  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3365  cls
+ 3366  cd Desktop/pet-care-frontend
+ 3367  code .
+ 3368  git checkout feature/profile
+ 3369  git flow
+ 3370  git pull
+ 3371  git branch -r
+ 3372  glola
+ 3373  git branch -r
+ 3374  git flow feature finish feature/profile
+ 3375  git checkout main
+ 3376  git flow init
+ 3377  git checkout feature/profile
+ 3378  git flow feature finish feature/profile
+ 3379  git flow feature finish profile
+ 3380  npm install
+ 3381  npm run dev
+ 3382  cd Desktop/pet-care-backend
+ 3383  sail up -d
+ 3384  git pull origin develop
+ 3385  git config pull.rebase false
+ 3386  git pull
+ 3387  git pull origin develop
+ 3388  git reset --hard
+ 3389  git pull origin develop
+ 3390  git add .
+ 3391  git commit
+ 3392  git push origin develop
+ 3393  npm run dev
+ 3394  npm install
+ 3395  npm run dev
+ 3396  git pull
+ 3397  npm run dev
+ 3398  cls
+ 3399  sail down
+ 3400  cls
+ 3401  cd Desktop/pet-care-backend
+ 3402  sail up -d
+ 3403  cd Documents/SE
+ 3404  cd 2-practice-uml-code/
+ 3405  idea .
+ 3406  sail down
+ 3407  cd Desktop/pet-care-frontend/
+ 3408  code .
+ 3409  cd Desktop/pet-care-backend
+ 3410  code .
+ 3411  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 3412  code .
+ 3413  cd Documents/CS442/jam2o-11/
+ 3414  code .
+ 3415  sail up -d
+ 3416  cls
+ 3417  npm install socket.io socker.io-client
+ 3418  npm install socket.io socket.io-client
+ 3419  cls
+ 3420  code .
+ 3421  npm run dev
+ 3422  sail down
+ 3423  sail up -d
+ 3424  code .
+ 3425  cls
+ 3426  sail redis
+ 3427  sail artisan tinker
+ 3428  sail artisan make:command RedisPublisher --command="app:redis:publish"
+ 3429  sail artisan make:command RedisSubscriber --command="app:redis:subscribe"
+ 3430  sail artisan app:redis:subscribe "notification.test"
+ 3431  cd Documents/CS442/03-laravel-layout-Chayakorn2002/
+ 3432  sail artisan app:redis:subscribe "notification.test"
+ 3433  sail
+ 3434  cls
+ 3435  sail artisan app:redis:subscribe "notification.test"
+ 3436  cd ../03-laravel-layout-Kchanit/
+ 3437  sail artisan app:redis:subscribe "notification.test"
+ 3438  cd ../03-laravel-layout-Kchanit/
+ 3439  cd Documents/CS442/03-laravel-layout-Kchanit/
+ 3440  sail artisan app:redis:subscribe "notification.test"
+ 3441  sail artisan app:redis:publish "notification.test" --message="Hello"
+ 3442  sail artisan app:redis:subscribe "notification.test"
+ 3443  sail artisan app:redis:publish "notification.test" --message="Hell02"
+ 3444  cls
+ 3445  who
+ 3446  cls
+ 3447  who
+ 3448  cls
+ 3449  cd Downloads/
+ 3450  ls -l
+ 3451  mv 01418235-2023-Lab11-ShellScript-3-v03.pdf ../Documents/unix/
+ 3452  ls -l
+ 3453  cd ../Documents/unix/
+ 3454  ls -l
+ 3455  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3456  fig
+ 3457  ls -l
+ 3458  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3459  vim
+ 3460  vim 1
+ 3461  vim 2.sh
+ 3462  ls -la
+ 3463  cd Documents/unix/
+ 3464  vim 1.c
+ 3465  ls -la
+ 3466  vim .vimrc
+ 3467  vim 1.c
+ 3468  gcc -o 1.c
+ 3469  gcc -o 1 1.c 
+ 3470  ls -l
+ 3471  mkdir ss3-6410450117/
+ 3472  mv 1.c 1 ss3-6410450117/
+ 3473  cd ss3-6410450117/
+ 3474  ls -l
+ 3475  vim 1.c
+ 3476  gcc -o 2 ../1.c 
+ 3477  ls -la
+ 3478  ./1
+ 3479  ./1 > temp
+ 3480  cat temp
+ 3481  echo $?
+ 3482  vim 2.sh
+ 3483  gcc 1.c 
+ 3484  ls -l
+ 3485  chmod u+x 2.sh
+ 3486  ./2.sh
+ 3487  ./2.sh hello.c
+ 3488  vim 2.sh
+ 3489  cls
+ 3490  ./2.sh hello.c
+ 3491  ls -l
+ 3492  mv 2.sh ss3-6410450117/
+ 3493  ./2.sh hello.c
+ 3494  vim 2.sh
+ 3495  cd ss3-6410450117/
+ 3496  vim 2.sh
+ 3497  cat 2.sh
+ 3498  vim 2.sh
+ 3499  ./2.sh hello.c
+ 3500  ls -l
+ 3501  cd ..
+ 3502  ls -l
+ 3503  cd ss3-6410450117/
+ 3504  ls- l
+ 3505  ls -l
+ 3506  rm 1 1.c a.out hello.input temp
+ 3507  ls -l
+ 3508  cat 2
+ 3509  rm 2
+ 3510  ls -l
+ 3511  vim hello.c
+ 3512  cl
+ 3513  cls
+ 3514  ./2.sh hello.c
+ 3515  cls
+ 3516  vim 2.sh
+ 3517  ls -l
+ 3518  vim ~/.zshrc
+ 3519  source ~/.zshrc
+ 3520  vim 2.sh
+ 3521  cd Documents/unix/
+ 3522  ls -l
+ 3523  vim 1.c
+ 3524  ./2.sh /Documents/unix/1.c
+ 3525  ./2.sh /documents/unix/1.c
+ 3526  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3527  ls -l
+ 3528  sl -l
+ 3529  ls -l
+ 3530  echo "$(basename "/Users/chayakorn/Documents/unix/1.c")"
+ 3531  vim 2.sh
+ 3532  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3533  vim 2.sh
+ 3534  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3535  vim 2.sh
+ 3536  ls -l
+ 3537  cat hello.input
+ 3538  echo "Hello, World > hello.output\n
+ 3539  echo "Hello, World\!" > hello.output\n
+ 3540  cat hello.output
+ 3541  diff hello.input hello.output
+ 3542  diff hello.input hello.c
+ 3543  ./2 hello.c
+ 3544  ./2.sh hello.c
+ 3545  vim 2.sh
+ 3546  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3547  vim 2.sh
+ 3548  ls -l
+ 3549  ./hello
+ 3550  time -p ./hello
+ 3551  echo "$(time -p ./hello 2>&1" | awk '/real/ {print $2}'
+ 3552  output=$(time -p ./hello 2>&1)
+ 3553  real_time=$(echo "$output" | awk '/real/ {print $2}')
+ 3554  echo $output
+ 3555  echo $real_time
+ 3556  time
+ 3557  man time
+ 3558  time ./hello
+ 3559  time ./hello 1>/dev/null
+ 3560  cat 2.sh
+ 3561  time ./hello 1>/dev/null
+ 3562  vim 2.sh
+ 3563  cat 2.sh
+ 3564  vim 2.sh
+ 3565  man timeout
+ 3566  man time
+ 3567  man timeout
+ 3568  timeout "5" "sleep 6"
+ 3569  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3570  timeout
+ 3571  vim 2.sh
+ 3572  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3573  vim 2.sh
+ 3574  pip install shell-timeout
+ 3575  pip
+ 3576  timeout
+ 3577  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3578  man timeout
+ 3579  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3580  cls
+ 3581  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3582  vim 2.sh
+ 3583  ./2.sh /Users/chayakorn/Documents/unix/1.c
+ 3584  ./2.sh hello.c
+ 3585  cat 2.sh
+ 3586  cls
+ 3587  vim 2.sh
+ 3588  ./2.sh hello
+ 3589  vim 2.sh
+ 3590  ./2.sh hello
+ 3591  vim 2.sh
+ 3592  ./2.sh hello
+ 3593  vim 2.sh
+ 3594  ./2.sh hello
+ 3595  vim 2.sh
+ 3596  ./2.sh f.c
+ 3597  vim 2.sh
+ 3598  vim f.c
+ 3599  ./2.sh f.c
+ 3600  vim 2.sh
+ 3601  cat 2.sh
+ 3602  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3603  cd Documents/
+ 3604  mkdir SA
+ 3605  cd SA
+ 3606  ls -l
+ 3607  cd Documents/SE
+ 3608  ls -l
+ 3609  cd CS471-Spring-MVC-Thymeleaf/
+ 3610  cd ..
+ 3611  cd CS471-Spring-MVC-Thymeleaf-1/
+ 3612  glola
+ 3613  git ..
+ 3614  cd ../kafe/
+ 3615  glola
+ 3616  idea .
+ 3617  cd Documents/SA
+ 3618  git clone https://github.com/Chayakorn2002/CS471-Web-Development-with-Spring-MVC-Thymeleaf.git
+ 3619  idea .
+ 3620  cd CS471-Web-Development-with-Spring-MVC-Thymeleaf/
+ 3621  idea .
+ 3622  docker run --name=mysql_kafe -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=kafe -p 3307:3306 -d mysql
+ 3623  docker exec -it mysql_kafe bash
+ 3624  git add .
+ 3625  git commit -m "chore(*): initial project"
+ 3626  git remote add origin https://github.com/Chayakorn2002/CS321-Final-Project.git\ngit branch -M main\n
+ 3627  git push origin main
+ 3628  git flow init
+ 3629  git branch feature/Auth
+ 3630  docker run --name=mysql_sa -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=sa -p 3307:3306 -d mysql
+ 3631  git add .
+ 3632  git commit -m "feat(auth): initial Authentication"
+ 3633  git branch
+ 3634  git branch auth
+ 3635  git branch -d Auth
+ 3636  git push origin auth
+ 3637  git checkout auth
+ 3638  git branch
+ 3639  git branch -d feature/Auth 
+ 3640  git branch
+ 3641  git branch feature/auth
+ 3642  git push origin feature/auth
+ 3643  git checkout feature/auth
+ 3644  git checkout main
+ 3645  git flow init
+ 3646  git branch release
+ 3647  git flow init
+ 3648  git flow init -f
+ 3649  git branch develop
+ 3650  git flow init -f
+ 3651  glola
+ 3652  git checkout develop
+ 3653  docker run --name=mysql_sa -e MYSQL_ROOT_PASSWORD=abc123 -e MYSQL_DATABASE=sa -p 3307:3306 -d mysql
+ 3654  docker exec -it mysql_kafe bash
+ 3655  docker exec -it mysql_sa bash
+ 3656  docker-compose up -d\n
+ 3657  docker-compose down
+ 3658  docker-compose up -d\n
+ 3659  docker-compose down
+ 3660  docker-compose up -d\n
+ 3661  cd Documents/SE/CS471-wisdom-book
+ 3662  idea c.
+ 3663  idea .
+ 3664  git add .
+ 3665  git commit -m "docs: Filling Name in the test file"
+ 3666  git push origin main
+ 3667  cd ../CS471-cucumber-shop/
+ 3668  idea .
+ 3669  git add .
+ 3670  git commit -m "docs: Filling Name in edited file"
+ 3671  git push origin main
+ 3672  git push origin master
+ 3673  cd ../CS471-cucumber-atm/
+ 3674  idea .
+ 3675  git add .
+ 3676  git commit -m "docs: Filling Name in edited file"
+ 3677  git push origin master
+ 3678  docker-compose down
+ 3679  cd Documents/CS442/02-css-Chayakorn2002/
+ 3680  code .
+ 3681  cd Desktop/pet-care-backend/
+ 3682  code .
+ 3683  git pull
+ 3684  cls
+ 3685  sail up -d
+ 3686  sail artisan migrate:fresh --seed
+ 3687  sail up -d
+ 3688  sail artisan migrate:fresh --seed
+ 3689  sail down
+ 3690  who
+ 3691  cd Documents/unix/
+ 3692  ls -l
+ 3693  cat 1
+ 3694  ls -l
+ 3695  cls
+ 3696  ls -l
+ 3697  cat 1.c
+ 3698  cat 1.input
+ 3699  ls -l
+ 3700  cat 1.input
+ 3701  ls -l
+ 3702  cls
+ 3703  ls -l
+ 3704  cd shell/
+ 3705  ls -l
+ 3706  cls
+ 3707  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3708  jobs
+ 3709  sleep 6&
+ 3710  ps -f
+ 3711  jobs
+ 3712  sleep 100 &
+ 3713  jobs
+ 3714  ps -f
+ 3715  sleep 3000&
+ 3716  ps -f
+ 3717  cls
+ 3718  ps -f
+ 3719  cls
+ 3720  ps -f
+ 3721  kill -KILL 70707
+ 3722  kill  70707
+ 3723  jobs 
+ 3724  kill &2
+ 3725  jobs
+ 3726  echo $SHE
+ 3727  echo $SHELL
+ 3728  cls
+ 3729  ps -f
+ 3730  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3731  แสห
+ 3732  cls
+ 3733  date
+ 3734  cd Documents/unix/shell
+ 3735  ls -l
+ 3736  mkdir Lecture
+ 3737  cd Lecture/
+ 3738  vim my-first-shell-script.sh
+ 3739  chm my-first-shell-script.sh
+ 3740  ./my-first-shell-script.sh
+ 3741  vim para.sh
+ 3742  chm para.sh
+ 3743  ./para.sh "Hello:
+ 3744  ./para.sh "Hello"
+ 3745  for i in {1..5}; do echo "New file $i" > file$i; done;
+ 3746  ls -l
+ 3747  vim file1
+ 3748  for i in {1..5}; do echo "New file $i" > file1; done;
+ 3749  cat file1
+ 3750  for i in {1..5}; do echo "New file $i\n" >| file1; done;
+ 3751  cat file1
+ 3752  for i in {1..5}; do echo "New file $i\n" >> file1; done;
+ 3753  cat file1
+ 3754  for i in {1..5}; do echo "New file $i" > file1; done;
+ 3755  cat file1
+ 3756  for i in {1..100}; do echo "New file $i" >> file1; done;
+ 3757  cat file1
+ 3758  rm file*
+ 3759  ls -l
+ 3760  for i in {1..100}; do echo "New file $i" >> file1; done;
+ 3761  rm file*[cd hoga]
+ 3762  ls -l
+ 3763  man rm
+ 3764  ./para.sh "file1"
+ 3765  cls
+ 3766  echo "$(( 20 + 16 ))"
+ 3767  echo -e "$(( 20 + 16 ))"
+ 3768  echo -e "$(( 20 == 20 ))"
+ 3769  echo -e "$(( 20 != 20 ))"
+ 3770  echo -e "$(( 20 == 20 ))" ? "True" : "False"
+ 3771  echo -e "$(( 20 > 5 ? "greater" : "less or equal" ))"
+ 3772  echo "$(( 20 > 5 ? "greater" : "less or equal" ))"
+ 3773  man echo
+ 3774  vim math.sh
+ 3775  chm math.sh
+ 3776  ./math.sh
+ 3777  cd Documents/unix/shell/Lecture/
+ 3778  ls -l
+ 3779  cat math.sh
+ 3780  vim ma.
+ 3781  vim math.sh
+ 3782  ./math.sh
+ 3783  cat math.sh
+ 3784  ./math.sh
+ 3785  vim math.sh
+ 3786  ./math.sh
+ 3787  vim math.sh
+ 3788  ./math.sh
+ 3789  vim math.sh
+ 3790  ./math.sh
+ 3791  vim math.sh
+ 3792  ./math.sh
+ 3793  cls
+ 3794  vim math-exp.sh
+ 3795  chm math-exp.sh
+ 3796  ./math.sh
+ 3797  ./math-exp.sh
+ 3798  vim ~/.zshrc
+ 3799  run 
+ 3800  vim run.sh
+ 3801  source ~/.zshrc
+ 3802  cls
+ 3803  source ~/.zshrc
+ 3804  vim ~/.zshrc
+ 3805  run math.sh
+ 3806  vim ~/.zshrc
+ 3807  source ~/.zshrc
+ 3808  run math.sh
+ 3809  ls -l
+ 3810  ls -la
+ 3811  vim /Users/chayakorn/Documents/unix/
+ 3812  mv run.sh /Users/chayakorn/Documents/unix/
+ 3813  ls -l
+ 3814  vim ./.zshrc
+ 3815  source ~/.zshrc
+ 3816  run math.sh
+ 3817  vim ./.zshrc
+ 3818  source ~/.zshrc
+ 3819  run math.sh
+ 3820  cat ../../run.sh
+ 3821  vim ../../run.sh
+ 3822  vim ./.zshrc
+ 3823  source ~/.zshrc
+ 3824  run math.sh
+ 3825  chm ../../run.sh
+ 3826  run math.sh
+ 3827  vim ../../run.sh
+ 3828  run math.sh
+ 3829  run math-exp.sh
+ 3830  cls
+ 3831  ./math-exp.sh
+ 3832  cls
+ 3833  echo "$(( 20 + 5 ))"
+ 3834  cat math.sh math.sh
+ 3835  let count3="(( 5 + 1 ))"
+ 3836  echo $count3
+ 3837  cls
+ 3838  \nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "\nThe world is " the one who will rule the world is me  "
+ 3839  cls
+ 3840  cler
+ 3841  clear
+ 3842  clear -x
+ 3843  clear
+ 3844  cls
+ 3845  vim ~/.zshrc
+ 3846  vim ~/.zshrc.pre-oh-my-zsh
+ 3847  vim ~/.zshrc.
+ 3848  vim ~/.zshrc.pre-oh-my-zsh-2023-06-28_15-34-53
+ 3849  vim ~/.zshrc.save
+ 3850  ls -la ~/
+ 3851  vim ~/.zprofile
+ 3852  vim ~/.oh-my-zsh/
+ 3853  cd ~/.oh-my-zsh/
+ 3854  ls -l
+ 3855  cat oh-my-zsh.sh
+ 3856  แสห
+ 3857  cls
+ 3858  clsp;;j;j;j;klklj;j;klkl;j;jlklk;j;jlklk;j
+ 3859  cls
+ 3860  cd ~/Documents/unix/shell/Lecture/
+ 3861  ls -l
+ 3862  echo "$[[ -s file1 ]]"
+ 3863  echo "[[ -s file1 ]]"
+ 3864  temp=[[ -s file1 ]]
+ 3865  cls
+ 3866  [[ 7 > 5 && 6 > 5 ]]; echo $?
+ 3867  [[ 7 == 5 || 6 > 5 ]]; echo $?
+ 3868  [[ 7 == 5 || 6 < 7 ]]; echo $?
+ 3869  [[ ! "a" = "b" ]]; echo $?
+ 3870  vim if.sh
+ 3871  who
+ 3872  who | grep Chaya*
+ 3873  who | grep Chaya.
+ 3874  who | grep Chayakorn
+ 3875  who | grep chayakorn
+ 3876  who | grep chaya
+ 3877  who | grep chaya*
+ 3878  who | grep chaya.*
+ 3879  cls
+ 3880  cls th
+ 3881  echo $home
+ 3882  echo $HOME
+ 3883  run if.sh 
+ 3884  run if.sh chayakorn
+ 3885  ./if.sh chayakorn
+ 3886  ./if.sh chayakor
+ 3887  ./if.sh chayakorn j
+ 3888  ./if.sh chayakorn_
+ 3889  run if.sh
+ 3890  vim ../../run.sh
+ 3891  vim if.sh
+ 3892  vim ../../run.sh
+ 3893  source ~/.zshrc
+ 3894  run if.sh
+ 3895  run if.sh cha
+ 3896  vim ../../run.sh
+ 3897  if [[ -s file1 ]] then; echo "Yeah;
+ 3898  if [[ -s file1 ]] then; echo "Yeah; fi
+ 3899  if [[ -s file1 ]]; then echo "Yeah; fi
+ 3900  if [[ -s file1 ]]; then echo "Yeah" fi
+ 3901  if [[ -s file1 ]]; then echo "Yeah"; fi;
+ 3902  if [[ -s file1 ]]; then echo "Yeah"; else echo "NO; fi;
+ 3903  if [[ -s file1 ]]; then echo "Yeah"; else; echo "NO; fi;
+ 3904  if [[ -s file1 ]]; then echo "Yeah"; else; echo "NO'; fi;
+ 3905  if [[ -s file1 ]]; then echo "Yeah"; else; echo "NO"; fi;
+ 3906  if [[ -s file ]]; then echo "Yeah"; else; echo "NO"; fi;
+ 3907  date
+ 3908  man date
+ 3909  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 3910  date +%b
+ 3911  vim season.sh
+ 3912  original="Hello world"
+ 3913  new="${orginal/World/Unix}"
+ 3914  echo $new
+ 3915  echo "${orginal}"
+ 3916  echo -e "${orginal}"
+ 3917  echo "$new"
+ 3918  echo $new
+ 3919  echo $original
+ 3920  echo ${original}
+ 3921  echo "${original}"
+ 3922  new="${original}/World?Unix"
+ 3923  echo new
+ 3924  echo $new
+ 3925  echo ${new}
+ 3926  echo ${#new}
+ 3927  echo ${date}
+ 3928  echo $(date)
+ 3929  fruits=("apple" "banana" "cherry");echo "Fruits: ${fruits[*]}";\n
+ 3930  fruits=("apple" "banana" "cherry");echo "Fruits: ${fruits[@]}";\n
+ 3931  fruits=("apple" "banana" "cherry");echo "Fruits: ${fruits["@"]}";\n
+ 3932  run season.sh
+ 3933  source ~/.zshrc
+ 3934  run season.sh
+ 3935  vim season.sh
+ 3936  cat season.sh
+ 3937  vim season.sh
+ 3938  run season.sh
+ 3939  vim season.sh
+ 3940  run season.sh
+ 3941  vim season.sh
+ 3942  run season.sh
+ 3943  vim season.sh
+ 3944  cat season.sh
+ 3945  vim season.sh
+ 3946  run season.sh
+ 3947  vim season.sh
+ 3948  run season.sh
+ 3949  mv season.sh 01-season.sh
+ 3950  ls -l
+ 3951  cls
+ 3952  file file1
+ 3953  file 01-season.sh
+ 3954  vim 02-file-type.sh
+ 3955  tr -s """$(file file1)"
+ 3956  tr -s "" "$(file file1)"
+ 3957  tr -s "$(file file1)"
+ 3958  man tr
+ 3959  man file
+ 3960  file -b file1
+ 3961  run 02-file-type.sh file1
+ 3962  ./02-file-type.sh file1
+ 3963  ./02-file-type.sh if.sh
+ 3964  vim 02-file-type.sh
+ 3965  ./02-file-type.sh if.sh
+ 3966  vim 02-file-type.sh
+ 3967  ./02-file-type.sh if.sh
+ 3968  ./02-file-type.sh file1
+ 3969  ./02-file-type.sh file
+ 3970  cls
+ 3971  ps axo user:30,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm
+ 3972  ps axo user:30,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm | grep "^6410450117"
+ 3973  ps axo user:30,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm
+ 3974  ps axo user:30,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm | grep "^6410450117"
+ 3975  cls
+ 3976  vim 03-user-command.sh
+ 3977  run 03-user-command.sh
+ 3978  ./03-user-command.sh
+ 3979  ps axo user:30,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm
+ 3980  ps axo user,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm
+ 3981  ps axo user,pid,comm
+ 3982  ls -l
+ 3983  ps axo user,pid,comm
+ 3984  ps axo user,pid,comm | grep "chayakorn"
+ 3985  ps axo user,pid,comm | grep "chayakorn" | grep "ls"
+ 3986  ps axo user,pid,comm | grep "chayakorn"
+ 3987  cls
+ 3988  vim 03-user-command.sh
+ 3989  ./03-user-command.sh chayakorn ls
+ 3990  vim 03-user-command.sh
+ 3991  ./03-user-command.sh chayakorn ls
+ 3992  vim 03-user-command.sh
+ 3993  ./03-user-command.sh chayakorn ls
+ 3994  cls
+ 3995  vim 03-user-command.sh
+ 3996  ./03-user-command.sh chayakorn ls
+ 3997  ./03-user-command.sh chayakorn system
+ 3998  ./03-user-command.sh ..... system
+ 3999  ./03-user-command.sh sys system
+ 4000  ./03-user-command.sh cha system
+ 4001  vim 03-user-command.sh
+ 4002  ./03-user-command.sh chayakorn system
+ 4003  vim 04-logged-in.sh
+ 4004  cls
+ 4005  last -w
+ 4006  last
+ 4007  cls
+ 4008  run 04-logged-in.sh
+ 4009  ./04-logged-in.sh chayakorn
+ 4010  vim 04-logged-in.sh
+ 4011  ./04-logged-in.sh chayakorn
+ 4012  vim 04-logged-in.sh
+ 4013  ./04-logged-in.sh chayakorn
+ 4014  clsl
+ 4015  cls
+ 4016  แสห
+ 4017  cls
+ 4018  curl -s "https://laravel.build/example-app?with=mysql,redis,mailpit" | bash
+ 4019  ls -l
+ 4020  mv example-app/ Documents/SA/
+ 4021  docker-compose down
+ 4022  docker-compose up
+ 4023  docker-compose up -d\n
+ 4024  cls
+ 4025  cd ~/Documents/SA/example-app/
+ 4026  code .
+ 4027  docker-compose down
+ 4028  code .
+ 4029  sail up -d
+ 4030  sail down
+ 4031  sail up -d
+ 4032  sail composer require laravel/breeze --dev 
+ 4033  sail artisan breeze:install blade
+ 4034  sail npm run dev
+ 4035  sail artisan make:controller AdminController -r
+ 4036  cd ~/Documents/CS442/03-laravel-layout-Kchanit/
+ 4037  code .
+ 4038  sail down
+ 4039  sail up -d
+ 4040  sail npm run dev
+ 4041  cd ..
+ 4042  ls -l
+ 4043  cd Pornleejaroen/
+ 4044  sail down
+ 4045  sail up -d
+ 4046  sail down
+ 4047  sail up -d
+ 4048  sail down
+ 4049  sail up -d
+ 4050  sail npm run dev
+ 4051  cd ..
+ 4052  ls -l
+ 4053  cd ..
+ 4054  ls -l
+ 4055  curl -s "https://laravel.build/Pornleejaroen?with=mysql,redis,mailpit" | bash
+ 4056  cd Documents/SA/
+ 4057  cd Pornleejaroen/
+ 4058  sail down
+ 4059  cd Pornleejaroen/
+ 4060  code .
+ 4061  cd Documents/CS442/03-laravel-layout-Chayakorn2002/
+ 4062  cd ..
+ 4063  cd 03-laravel-layout-Kchanit/
+ 4064  code .
+ 4065  sail composer require laravel/breeze --dev 
+ 4066  sail up -d
+ 4067  sail composer require laravel/breeze --dev 
+ 4068  sail artisan breeze:install blade
+ 4069  code .
+ 4070  sail down
+ 4071  sail up -d
+ 4072  cd ..
+ 4073  ls -l
+ 4074  rm Pornleejaroen/
+ 4075  rm -rf Pornleejaroen/
+ 4076  sail down
+ 4077  sail up -d
+ 4078  sail npm run dev
+ 4079  sail down
+ 4080  sail up -d
+ 4081  sail down
+ 4082  sail up -d
+ 4083  sail artisan migrate:fresh --seed
+ 4084  cd Documents/
+ 4085  ls -l
+ 4086  cd Pornleejaroen/
+ 4087  echo $PATH
+ 4088  pwd
+ 4089  sail down
+ 4090  sail up -d
+ 4091  sail artisan migrate:fresh --seed
+ 4092  sail npm run dev
+ 4093  sail artisan make:controller AdminController -r
+ 4094  sail npm run dev
+ 4095  sail artisan route:list
+ 4096  sail npm run dev
+ 4097  sail artisan route:clear
+ 4098  sail artisan route:list
+ 4099  composer dump-autoload\n
+ 4100  sail composer dump-autoload\n
+ 4101  cd ..
+ 4102  cd SA
+ 4103  ls -l
+ 4104  curl -s "https://laravel.build/Pornleejaroen?with=mysql,redis,mailpit" | bash
+ 4105  sail down
+ 4106  cd Pornleejaroen/
+ 4107  code .
+ 4108  sail up -d
+ 4109  sail down
+ 4110  sail up -d
+ 4111  code .
+ 4112  sail up -d
+ 4113  sail composer require laravel/breeze --dev 
+ 4114  sail artisan breeze:install blade
+ 4115  sail npm run dev
+ 4116  sail artisan migrate:fresh --seed
+ 4117  sail down
+ 4118  sail up -d
+ 4119  sail artisan migrate:fresh --seed
+ 4120  cd ..
+ 4121  rm Pornleejaroen/
+ 4122  cd Pornleejaroen/
+ 4123  sail down
+ 4124  cd ..
+ 4125  rm -rf Pornleejaroen/
+ 4126  cd ..
+ 4127  rm -rf Pornleejaroen/
+ 4128  cd SA
+ 4129  ls -l
+ 4130  curl -s "https://laravel.build/SA-Pornleejaroen?with=mysql,redis,mailpit" | bash
+ 4131  cd SA-Pornleejaroen/
+ 4132  code .
+ 4133  sail up -d
+ 4134  sail composer require laravel/breeze --dev 
+ 4135  sail artisan breeze:install blade
+ 4136  sail npm run dev
+ 4137  sail artisan migrate:fresh --seed
+ 4138  code .
+ 4139  sail down
+ 4140  sail up -d
+ 4141  sail artisan make:controller AdminController -r
+ 4142  sail artisan migrate:fresh --seed
+ 4143  sail artisan make:seeder UserSeeder
+ 4144  sail artisan migrate:fresh --seed
+ 4145  sail artisan make:controller StaffController -r
+ 4146  sail artisan make:middleware CheckUserRole\n
+ 4147  sail npm run dev
+ 4148  cd Documents/CS442/eventnie/
+ 4149  code .
+ 4150  php artisan make:middleware RedirectStaffToHome
+ 4151  sail  artisan make:middleware RedirectStaffToHome
+ 4152  sail  artisan make:middleware RedirectAdminToHome
+ 4153  cls
+ 4154  sail artisan route:list
+ 4155  sail artisan route:clear
+ 4156  sail artisan route:list
+ 4157  sail artisan make:policy AdminPolicy 
+ 4158  sail artisan make:controller HomeController
+ 4159  sail artisan migrate:fresh --seed
+ 4160  cd Documents/SA/
+ 4161  ls -l
+ 4162  sail down
+ 4163  curl -s "https://laravel.build/SA?with=mysql,redis,mailpit" | bash
+ 4164  cd SA
+ 4165  code .
+ 4166  sail up -d
+ 4167  fig
+ 4168  code .
+ 4169  sail composer require laravel/breeze --dev 
+ 4170  sail artisan breeze:install blade
+ 4171  code .
+ 4172  sail artisan make:seeder UserSeeder
+ 4173  sail artisan make:controller HomeController
+ 4174  sail artisan make:controller AdminController -r
+ 4175  sail artisan route:list
+ 4176  sail artisan make:policy AdminPolicy 
+ 4177  sail down
+ 4178  sail up -d
+ 4179  sail artisan migrate:fresh --seed
+ 4180  sail down
+ 4181  sail up -d
+ 4182  git init
+ 4183  rm -f .git
+ 4184  rm -r .git
+ 4185  code .
+ 4186  sail artisan make:policy StaffPolicy 
+ 4187  sail composer global require laravel/installer
+ 4188  npm install -D tailwindcss postcss autoprefixer flowbite
+ 4189  npx tailwindcss init -p
+ 4190  npm i preline
+ 4191  sail artisan make:policy UserPolicy 
+ 4192  cd Documents/unix/shell/Lecture/
+ 4193  ls -l
+ 4194  git init
+ 4195  git add .
+ 4196  git commit -m "chore(*): initial project"
+ 4197  git remote add origin https://github.com/Chayakorn2002/SA-Pornleecharoen.git
+ 4198  git push origin main
+ 4199  cls
+ 4200  sail down
+ 4201  sail up -d
+ 4202  cls
+ 4203  sail artisan make:migration create_report_migration --create="reports"
+ 4204  sail artisan make:migration create_product_table --create="products"
+ 4205  sail artisan make:migration create_category_table --create="category"
+ 4206  sail artisan make:migration create_oder_item_table --create="order_item" 
+ 4207  sail artisan make:migration create_order_table --create="orders" -m
+ 4208  sail artisan make:migration create_order_table -m --create="orders" 
+ 4209  sail artisan make:migration create_order_table --model="Order" --create="orders" 
+ 4210  sail artisan make:migration create_order_table -m --create="orders" 
+ 4211  sail artisan make:migration create_order_table --create="orders" 
+ 4212  sail artisan make:migration create_image_catalogue_table --create="image_catalogue" 
+ 4213  sail artisan make:model Order -m
+ 4214  sail artisan migrate:fresh --seed
+ 4215  sail artisan make:model product -m
+ 4216  sail artisan make:model Product -m
+ 4217  sail artisan make:model Report -m
+ 4218  sail artisan make:model Category -m
+ 4219  cla
+ 4220  cls
+ 4221  git branch develop
+ 4222  git branch
+ 4223  git checkout develop
+ 4224  composer require "dwij/laraadmin:1.0.40"
+ 4225  sail composer require "dwij/laraadmin:1.0.40"
+ 4226  git add .
+ 4227  git commit -m "feat(db) db init"
+ 4228  git push origin main
+ 4229  git push origin develop
+ 4230  sail artisan make:model ImageCatalogue
+ 4231  code .
+ 4232  sail artisan make:controller UserController -r
+ 4233  sail artisan route:list
+ 4234  cls
+ 4235  sail artisan make:controller StaffController -r
+ 4236  sail artisan make:controller ProductController -r
+ 4237  sail artisan make:controller OrderController -r
+ 4238  sail artisan make:factory ProductFactory
+ 4239  sail artisan make:seeder ProductSeeder
+ 4240  sail artisan make:seeder CategorySeeder
+ 4241  sail artisan make:factory CategoryFactory
+ 4242  sail artisan migrate:fresh --seed
+ 4243  git add .
+ 4244  git commit -m "feat(overall): Controller, View, Factories, Migrations updated"
+ 4245  git push origin develop
+ 4246  sail yarn dev
+ 4247  cd Desktop/pet-care-frontend/
+ 4248  code .
+ 4249  cd ../pet-care-backend/; code .
+ 4250  cd ../pet-care-frontend/; code .
+ 4251  sail artisan route:list
+ 4252  cls
+ 4253  php "/Users/chayakorn/Documents/SA/SA/app/Http/Controllers/AdminController.php"
+ 4254  sail artisan route:list
+ 4255  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 4256  sail artisan migrate:fresh --seed
+ 4257  sail artisan route:list
+ 4258  cls
+ 4259  code .
+ 4260  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 4261  sail artisan make:model ProductFilter 
+ 4262  sail artisan migrate:fresh --seed
+ 4263  sail artisan storage:link
+ 4264  sail artisan migrate:fresh --seed
+ 4265  ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 4266  cls
+ 4267  sail artisan route:list
+ 4268  git add .
+ 4269  git commit -m "feat(overall): Staff's product, Admin handled"
+ 4270  git push origin develop
+ 4271  cls
+ 4272  uptime
+ 4273  code .
+ 4274  sail down
+ 4275  sail up -d
+ 4276  sail yarn dev
+ 4277  sail artisan migrate:fresh --seed
+ 4278  git add .
+ 4279  git commit -m "feat(fix): Staff's product update handled"
+ 4280  git push origin develop
+ 4281  cd Documents/unix/shell/Lecture/
+ 4282  ls -l
+ 4283  cd ..
+ 4284  ls -l
+ 4285  cd ss1-6410450117/
+ 4286  ls -l
+ 4287  mkdir 2810
+ 4288  cd 2810
+ 4289  ls -l
+ 4290  vim 01.sh
+ 4291* cd Documents/unix/shell/Lecture/
+ 4292  cls
+ 4293  vim 01.sh
+ 4294* cd ss1-6410450117/
+ 4295* cd ../ss1-6410450117/
+ 4296* cat 1.sh
+ 4297  run 01.sh
+ 4298  ./01 4 8
+ 4299  ./01.sh 4 8
+ 4300* cd Documents/unix/shell/Lecture/
+ 4301* cd ..
+ 4302* cd ss1-6410450117/2810/
+ 4303* vim 01.sh
+ 4304  ./01.sh 4 8
+ 4305  cls
+ 4306  ./01.sh 4 2
+ 4307  ./01.sh 4 5
+ 4308  ./01.sh 4 4
+ 4309  ./01.sh 4 
+ 4310* vim 01.sh
+ 4311  ./01.sh 4 
+ 4312* cd ..
+ 4313* cd Lecture/
+ 4314* ls -l
+ 4315* cat 01-season.sh
+ 4316* cat 02-file-type.sh
+ 4317  vim 01.sh
+ 4318  cd ../../Lecture/; mkdir 02-Lec
+ 4319  cd 02-Lec/
+ 4320  vim while.sh
+ 4321* cd ../../ss2-6410450117/
+ 4322* cd ../../shell/Lecture/02-Lec/
+ 4323* run while.sh
+ 4324  vim while.sh
+ 4325  here's to the one that we got, cheers to the wish you were here but you're not cause the drink bring back kall the memories of everything we've been through, toast to the here's today toast to the one that we've lost on the way, cause the drinks bring back all the memories and the memories bring back memories bring back you
+ 4326  cls
+ 4327  vim case.sh
+ 4328* cls
+ 4329* run case.sh
+ 4330  vim case.sh
+ 4331* ./case.sh
+ 4332  vim case.sh
+ 4333* ./case.sh
+ 4334* cat case.sh
+ 4335  vim case.sh
+ 4336* ./case.sh
+ 4337  vim case.sh
+ 4338* ./case.sh
+ 4339  vim case.sh
+ 4340* ./case.sh
+ 4341  vim case.sh
+ 4342* ./case.sh
+ 4343  vim case.sh
+ 4344* ./case.sh
+ 4345  vim case.sh
+ 4346* ./case.sh
+ 4347  vim case.sh
+ 4348* ./case.sh
+ 4349  vim case.sh
+ 4350* ./case.sh
+ 4351* cls
+ 4352* vim case2.sh
+ 4353* run case2.sh
+ 4354  vim case2.sh
+ 4355* run case2.sh
+ 4356  vim case2.sh
+ 4357* run case2.sh
+ 4358* cls
+ 4359* vim hour-case.sh
+ 4360* date +"%I:%M"
+ 4361* cls
+ 4362* run hour-case.sh
+ 4363  vim hour-case.sh
+ 4364* run hour-case.sh
+ 4365  vim hour-case.sh
+ 4366* run hour-case.sh
+ 4367  vim hour-case.sh
+ 4368* date
+ 4369  man cut
+ 4370* date | cut -c "12-27"
+ 4371* date | cut -c "12-16"
+ 4372* code .
+ 4373* sail down
+ 4374* sed -i 's/^/\t/' hour-case.sh
+ 4375  vim hour-case.sh
+ 4376* sed 's/^/\t/' hour-case.sh
+ 4377* awk '/case/,/esac/ {if ($0 !~ /esac/) sub(/./, "\t&")} 1' hour-case.sh > formatted-hour-case.sh\n
+ 4378* vim formatter.sh
+ 4379* ls -l
+ 4380* vim while2.sh
+ 4381* cls
+ 4382* run while2.sh
+ 4383  vim while2.sh
+ 4384* run while2.sh
+ 4385  vim while2.sh
+ 4386* run while2.sh
+ 4387* cls
+ 4388  vim until.sh
+ 4389* run until.sh
+ 4390* ./until.sh
+ 4391* ./until.sh until.sh
+ 4392  vim until.sh
+ 4393* ./until.sh until.sh
+ 4394* ./until.sh until
+ 4395* cat until.sh
+ 4396  vim until.sh
+ 4397  vim for.sh
+ 4398* chm for
+ 4399* chm for.sh
+ 4400* ./for.sh
+ 4401* ./for.sh case.sh formatted-hour-case.sh while2.sh
+ 4402  vim for.sh
+ 4403* ./for.sh case.sh formatted-hour-case.sh while2.sh
+ 4404  vim for.sh
+ 4405* ./for.sh case.sh formatted-hour-case.sh while2.sh
+ 4406  vim for.sh
+ 4407* ./for.sh case.sh formatted-hour-case.sh while2.sh
+ 4408  vim for.sh
+ 4409  vim select.sh
+ 4410* chm select.sh
+ 4411* ./select.sh
+ 4412  vim select.sh
+ 4413* cat select.sh
+ 4414* cls
+ 4415* cat select.sh
+ 4416* ./select.sh
+ 4417* cls
+ 4418* vim select02.sh
+ 4419* run select02.sh
+ 4420  vim select.sh
+ 4421  vim select02.sh
+ 4422* run select02.sh
+ 4423  vim select02.sh
+ 4424* ./select.sh
+ 4425* cls
+ 4426  vim arithmetic-loop.sh
+ 4427* chm arithmetic-loop.sh
+ 4428* ./arithmetic-loop.sh
+ 4429  vim arithmetic-loop.sh
+ 4430* ./arithmetic-loop.sh 0 10
+ 4431  vim set01.sh
+ 4432* chm set01.sh
+ 4433* ./set01.sh
+ 4434* ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 4435* cl
+ 4436* cls
+ 4437* cd ..
+ 4438* ls -l
+ 4439* vim mv-all.sh
+ 4440* ./shell/Lecture/02-Lec/ shell/Lecture
+ 4441* shell/Lecture/02-Lec/ shell/Lecture
+ 4442* ls -l
+ 4443* chm mv-all.sh
+ 4444* ./mv-all.sh shell/Lecture/02-Lec shell/Lecture
+ 4445  ls -l
+ 4446  cd  ..
+ 4447* ls -l
+ 4448* rm -r 02-Lec/
+ 4449* ls -l
+ 4450* vim function01.sh
+ 4451* chm function01.sh
+ 4452* ls -l
+ 4453* cls
+ 4454* ./function01.sh
+ 4455  cls
+ 4456  vim function01.sh
+ 4457* ./function01.sh less
+ 4458* ./function01.sh moew
+ 4459  vim function01.sh
+ 4460* ./function01.sh more
+ 4461* ./function01.sh less
+ 4462  vim function01.sh
+ 4463* ./function01.sh less
+ 4464* ./function01.sh more
+ 4465  vim function01.sh
+ 4466* ./function01.sh
+ 4467  vim function01.sh
+ 4468* ./function01.sh
+ 4469* cat function01.sh
+ 4470* cls
+ 4471  vim function01.sh
+ 4472* ./function01.sh
+ 4473* cat function01.sh
+ 4474* cls
+ 4475  vim function01.sh
+ 4476* ./function01.sh
+ 4477* cls
+ 4478  vim function02.sh
+ 4479  vim function03.sh
+ 4480* run function03.sh
+ 4481  vim function03.sh
+ 4482* run function03.sh
+ 4483  vim validator.sh
+ 4484* vim cls
+ 4485* cls
+ 4486* chm validator.sh
+ 4487* ./validator.sh 
+ 4488  vim validator.sh
+ 4489* ./validator.sh 
+ 4490* cls
+ 4491* ./validator.sh 
+ 4492* ./validator.sh 1 2 3 4 5 6 7 8 9 0
+ 4493  vim num_arg.sh
+ 4494* cat num_arg.sh
+ 4495  vim num_arg.sh
+ 4496  vim num_arg02.sh
+ 4497* chm num_arg02.sh
+ 4498* ./num_arg02.sh
+ 4499* ./num_arg02.sh 2 2
+ 4500* ./num_arg02.sh 2 
+ 4501  vim num_arg02.sh
+ 4502* ./num_arg02.sh 2 
+ 4503  vim num_arg02.sh
+ 4504* ./num_arg02.sh 2 
+ 4505* ./num_arg02.sh a
+ 4506  vim num_arg02.sh
+ 4507* ./num_arg02.sh a
+ 4508* ./num_arg02.sh 2
+ 4509* ./num_arg02.sh 2 2
+ 4510* ./num_arg02.sh 2 
+ 4511  vim num_arg02.sh
+ 4512* cat num_arg02.sh
+ 4513* ./num_arg02.sh 2 
+ 4514* ./num_arg02.sh a
+ 4515  vim num_arg02.sh
+ 4516* cls
+ 4517* vim file-validator.sh
+ 4518* cls
+ 4519* chm file-validator.sh
+ 4520* ./file-validator.sh 1
+ 4521* ./file-validator.sh 2
+ 4522* ./file-validator.sh file1
+ 4523* ./file-validator.sh /private
+ 4524* ./file-validator.sh /private/tmp/CoreFxPipe_pipe_p
+ 4525* ./file-validator.sh /private/tmp/CoreFxPipe_pipe_p25125\#1
+ 4526* ./file-validator.sh /usr/lib/system/introspection/libdispatch.dylib function02.sh 
+ 4527* cls
+ 4528* bash -o xtrace function03.sh
+ 4529* x=5
+ 4530* echo $x
+ 4531* pegasus ryu sei ken
+ 4532* here's to the one that we got, cheers to the wish you were here but you're not cause the drink bring back kall the memories of everything we've been through, toast to the here's today toast to the one that we've lost on the way, cause the drinks bring back all the memories and the memories bring back memories bring back you
+ 4533* cd ../ss1-6410450117/
+ 4534* cd 2810/
+ 4535  cd ../ss1-6410450117/2810/
+ 4536  vim 01.sh
+ 4537  vim 01-1.sh
+ 4538  vim 02.sh
+ 4539* cd ..
+ 4540* ls -l
+ 4541* cd 2810/
+ 4542* cat ../2.sh
+ 4543  chm 02.sh
+ 4544  ./02.sh 1 2 3
+ 4545  cat ../2.sh
+ 4546  vim 02.sh
+ 4547  cls
+ 4548  ./02.sh 1 2 3
+ 4549  cls
+ 4550  vim 02.sh
+ 4551  ./02.sh 1 2 3
+ 4552  vim 02.sh
+ 4553  ./02.sh 1 2 3
+ 4554  vim 03.sh
+ 4555* cat ../3.sh
+ 4556  chm 03.sh
+ 4557  ./03.sh 1 2 3 4 5
+ 4558  vim 03.sh
+ 4559  ./03.sh 1 2 3 4 5
+ 4560  ./03.sh 1 2 3 4 3
+ 4561  ./03.sh 1 2 3 4 3 0.1
+ 4562  ./03.sh 1 2 3 4 3 -1
+ 4563  ./03.sh 1 2 3 4 3 -1 -100
+ 4564  ./03.sh 1 2 3 4 3 -1 -100 -100 -100
+ 4565* cat ../4.sh
+ 4566* date -r 
+ 4567* date -r 01.sh
+ 4568* date -r 02.sh
+ 4569  vim 02.sh
+ 4570  vim 04.sh
+ 4571* date -r 02.sh +%s
+ 4572* man date
+ 4573* ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 4574  chm 04.sh
+ 4575  ./04.sh 01.sh 02.sh 03.sh
+ 4576  chm 04.sh
+ 4577  vim 04.sh
+ 4578  ./04.sh 01.sh 02.sh 03.sh
+ 4579  vim 03.sh
+ 4580  ./04.sh 01.sh 02.sh 03.sh
+ 4581  vim 05.sh
+ 4582* cat ../../Lecture/validator.sh
+ 4583* cat ../5.sh
+ 4584* cat ../4.sh
+ 4585* date -r 02.sh +%s
+ 4586* cat ../3.sh
+ 4587  rm 05.sh
+ 4588* cat ../6.sh
+ 4589* date -d 
+ 4590* date -d "Sept 20, 2000"
+ 4591* date -d "Sept 20, 2000" +%s
+ 4592* man date
+ 4593* cat ../7.sh
+ 4594* cat ../3.sh
+ 4595* cat ../4.sh
+ 4596* ls -l
+ 4597* cd ..
+ 4598* cd ../Lecture
+ 4599* ls- l
+ 4600* ls - l
+ 4601* ls -l
+ 4602* cat num_arg.sh
+ 4603* cat num_arg2.sh
+ 4604* cat num_arg02.sh
+ 4605* vim pattern.sh
+ 4606* cat pattern.sh
+ 4607* vim pattern.sh
+ 4608  cd ../../Lecture
+ 4609  vim pattern.sh
+ 4610* chm pattern.sh
+ 4611* vim ~/.bashrc
+ 4612* vim ~/.zshrc
+ 4613* alias ch='chmod u+x'
+ 4614* ch pattern.sh
+ 4615* ./pattern.sh
+ 4616* cls
+ 4617* ./pattern.sh
+ 4618* cls
+ 4619* ./pattern.sh
+ 4620* str="/user/local/vin/myexefile.exe"
+ 4621* echo "${str}"
+ 4622* echo "${str#/*/*/}"
+ 4623* echo "${str#/.*/.*/}"
+ 4624* echo "${str#/*/.*/}"
+ 4625* echo "${str#/*/*/}"
+ 4626  vim pattern.sh
+ 4627* cls
+ 4628* ./pattern.sh
+ 4629* echo ${#str}
+ 4630* x=10
+ 4631* echo ${#x}
+ 4632* echo $(date)
+ 4633* date
+ 4634* echo "Today's information? Here(date)"
+ 4635* echo "Today's information? Here$(date)"
+ 4636* echo "Today's information? Here: $(date)"
+ 4637* echo "Today's information? Here\!\n$(date)"
+ 4638* echo "Today's information? Here\!\!\!\n$(date)"
+ 4639* names[2]
+ 4640* names=([tan]="Chayakorn" [pang]="Sarika")
+ 4641* names=(["tan"]="Chayakorn" ["pang"]="Sarika")
+ 4642* names=(hatter bo alice)
+ 4643* echo $names[1]
+ 4644* echo $names[0]
+ 4645* echo $names[2]
+ 4646* echo ${#names}
+ 4647* echo ${#names[@]}
+ 4648* jobs
+ 4649* ps -f
+ 4650* ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 4651  echo $$
+ 4652  echo $!
+ 4653  cd ../ss2-6410450117
+ 4654  ls -l
+ 4655  cat 1.sh
+ 4656  mkdir 2910
+ 4657  cd 2910
+ 4658  vim 2.sh
+ 4659* cd ../ss2-6410450117/2910
+ 4660* vim test.c
+ 4661* gcc test.c 
+ 4662* ls -l
+ 4663* rm a.out
+ 4664* gcc test.c test
+ 4665* cat ../2.sh
+ 4666* cls
+ 4667  ch 2.sh
+ 4668  chm 2.sh
+ 4669  ./2.sh test.c
+ 4670  ls -l
+ 4671  ./2.sh test.c
+ 4672  echo $?
+ 4673  ./2.sh test
+ 4674  echo $?
+ 4675  cls
+ 4676  cd ..
+ 4677  cd ../..
+ 4678  ls -l
+ 4679  mkdir ideas
+ 4680  cd ideas
+ 4681  sl -l
+ 4682  cat ../des_dir
+ 4683* cd
+ 4684* cd Documents/unix/
+ 4685* cd shell/
+ 4686* cd ss3-6410450117
+ 4687* cat 2.sh
+ 4688* ./2.sh f.input
+ 4689* cd shell/ss3-6410450117
+ 4690* ls -l
+ 4691* vim 2-1.sh
+ 4692* ssh 6410450117@sukreep.cs.sci.ku.ac.th
+ 4693* chm 2-1.sh
+ 4694* ./2-1.sh f.c
+ 4695* ./2-1.sh
+ 4696* ./2-1.sh hello
+ 4697* vim 2-1.sh
+ 4698* ./2-1.sh f.c
+ 4699* vim 2-1.sh
+ 4700* cd ../../ideas
+ 4701  vim file-backup.sh
+ 4702  chm file-backup.sh
+ 4703  ./file-backup.sh ../ideas test
+ 4704  vim file-backup.sh
+ 4705* cls
+ 4706* ./file-backup.sh ../ideas test
+ 4707* ls -l test
+ 4708* ls -l
+ 4709* ls -ld test
+ 4710  vim file-backup.sh
+ 4711* ls -l
+ 4712* ./file-backup.sh ../ideas /test
+ 4713  vim file-backup.sh
+ 4714* ls -l
+ 4715* ./file-backup.sh ../ideas mkdir test
+ 4716* mkdir test
+ 4717* mkdir test2
+ 4718* ./file-backup.sh ../ideas test2
+ 4719* ls -l
+ 4720* ls -l test2
+ 4721* cd test2
+ 4722* ls -l
+ 4723* cd ..
+ 4724* rm -r test2
+ 4725* ls -l
+ 4726* cls
+ 4727  man mkdir
+ 4728* ./file-backup.sh ../ideas test2
+ 4729  man mkdir
+ 4730  ./file-backup.sh ../ideas test2
+ 4731  vim file-backup.sh
+ 4732* ./file-backup.sh ../ideas test2
+ 4733* ls -l
+ 4734  vim file-backup.sh
+ 4735  vim file-search.sh
+ 4736* man find
+ 4737* chm file-search.sh
+ 4738* ./file-search.sh test2 .sh
+ 4739  vim file-search.sh
+ 4740* ./file-search.sh test2 .sh
+ 4741  vim file-search.sh
+ 4742* ./file-search.sh test2 
+ 4743* ./file-search.sh test2 .sh
+ 4744* ./file-search.sh test2 test
+ 4745* ./file-search.sh /test2 test
+ 4746* ./file-search.sh . test
+ 4747* find "." -type f -name "test"
+ 4748  vim file-search.sh
+ 4749  cat file-search.sh
+ 4750  vim file-search.sh
+ 4751* ./file-search.sh . test
+ 4752* ./file-search.sh /test2 test
+ 4753* ./file-search.sh test2 test
+ 4754  vim file-search.sh
+ 4755* ./file-search.sh test2 test
+ 4756* ./file-search.sh /Users/chayakorn/Documents/ 
+ 4757* ./file-search.sh /Users/chayakorn/Documents/ .txt
+ 4758* ./file-search.sh /Users/chayakorn/Documents/ .png
+ 4759* ./file-search.sh /Users/chayakorn/Documents/ .pdf
+ 4760  vim file-search.sh
+ 4761* ./file-search.sh /Users/chayakorn/Documents/ .pdf
+ 4762  vim file-search.sh
+ 4763* ./file-search.sh /Users/chayakorn/Documents/ .pdf
+ 4764* find "/Users/chayakorn/Documents" -type f -name ".pdf"
+ 4765* find "/Users/chayakorn/Documents" -type f -name "pdf"
+ 4766* ls -l ~/Documents/
+ 4767* ls -l ~/Documents/*.pdf
+ 4768* find "/Users/chayakorn/Documents" -type f -name "pdf"
+ 4769* ./file-search.sh /Users/chayakorn/Documents/ *.pdf
+ 4770* ./file-search.sh /Users/chayakorn/Documents/ "*.pdf"
+ 4771* ./file-search.sh /Users/chayakorn/Documents/ ".pdf"
+ 4772* ./file-search.sh /Users/chayakorn/Documents/ "*.pdf"
+ 4773  vim file-search.sh
+ 4774  cls
+ 4775  cl
+ 4776  scls
+ 4777  cls
+ 4778  lcs
+ 4779  cls
+ 4780  lcs
+ 4781  cls
+ 4782  lcs
+ 4783  cls
+ 4784  lcs
+ 4785  cl
+ 4786  slcs
+ 4787  cls
+ 4788  lcs
+ 4789  cls
+ 4790  lcs
+ 4791  cls
+ 4792  lcs
+ 4793  lc
+ 4794  slcs
+ 4795  lcs
+ 4796  cl
+ 4797  scls
+ 4798  cls
+ 4799  history
+ 4800  cls
+ 4801  hsitory
+ 4802  history
+ 4803  history | cut -f 2
+ 4804  history | cut -f"2"
+ 4805  history | cut -f 2 -d ' '
+ 4806  history | cut -f 3 -d ' '
+ 4807  history
+ 4808  history | cat -A
+ 4809  history | cat -t
+ 4810  history | awk '{a[$2]++} END{for(i in a){print a[i] " " i}}'
+ 4811  history | awk '{a[$2]++} END{for(i in a){print a[i] " " i}}' | sort -rn
+ 4812  vim most-used-command.sh
+ 4813  chm most-used-command.sh
+ 4814  ./most-used-command.sh
+ 4815  vim most-used-command.sh
+ 4816  cat most-used-command.sh
+ 4817  vim most-used-command.sh
+ 4818  ./most-used-command.sh
+ 4819  vim most-used-command.sh
+ 4820  ./most-used-command.sh
+ 4821  vim most-used-command.sh
+ 4822* ./most-used-command.sh
+ 4823  vim most-used-command.sh
+ 4824* ./most-used-command.sh
+ 4825  vim most-used-command.sh
+ 4826  cat most-used-command.sh
+ 4827  vim most-used-command.sh
+ 4828* ./most-used-command.sh
+ 4829  vim most-used-command.sh
+ 4830* ./most-used-command.sh
+ 4831  history
+ 4832  vim most-used-command.sh
+ 4833  history > a
+ 4834  ./most-used-command.sh a
+ 4835  vim most-used-command.sh
+ 4836  ./most-used-command.sh a
+ 4837  ./most-used-command.sh 
+ 4838  vim most-used-command.sh
+ 4839  ./most-used-command.sh 
+ 4840  ./most-used-command.sh a
+ 4841  cat most-used-command.sh
+ 4842  ./most-used-command.sh 
+ 4843  vim most-used-command.sh
+ 4844  ./most-used-command.sh 
+ 4845  ./most-used-command.sh a
+ 4846  ./most-used-command.sh cls
+ 4847  cls
+ 4848  vim most-used-command.sh
+ 4849  vim compresser.sh
+ 4850  ls -l
+ 4851  chm compresser.sh
+ 4852  ./compresser.sh 
+ 4853  vim compresser.sh
+ 4854* ./compresser.sh
+ 4855* cat compresser.sh
+ 4856* ./compresser.sh
+ 4857  vim compresser.sh
+ 4858* ls -l
+ 4859* rm test
+ 4860* ls -l
+ 4861* cat most-used-command.sh
+ 4862* cls
+ 4863* cat compresser.sh
+ 4864* cat file-search.sh
+ 4865* cat file-backup.sh
+ 4866* cat most-used-command.sh
+ 4867  cls

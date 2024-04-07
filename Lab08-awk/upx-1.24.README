@@ -1,0 +1,100 @@
+UPX:  the Ultimate Packer for eXecutables
+------------------------------------------
+UPX is a free, portable, extendable, high-performance executable
+packer for several different executable formats. It achieves an excellent
+compression ratio and offers very fast decompression. Your executables
+suffer no memory overhead or other drawbacks.
+UPX is copyrighted software distributed under the terms of the GNU General
+Public License, with special exceptions granting the free usage for
+commercial programs as stated in the UPX License Agreement.
+UPX uses the NRV compression library for compression services. A compatible
+but somewhat less efficient OpenSource implementation is available through
+the UCL compression library.
+UPX aims to be Commercial Quality Freeware.
+This version uses the UCL library.
+
+Runtime requirements:
+  cygwin-1.3.11 or newer
+
+Build requirements:
+  cygwin-1.3.11 or newer
+  ucl-1.01-1 (also with source package)
+  gnupg (only if signature on the package is wanted)
+
+Canonical homepage:
+  http://upx.sourceforge.net/
+
+Canonical download:
+  http://upx.sourceforge.net/download/upx-<VER>-src.tar.gz
+  
+------------------------------------
+
+Build instructions:
+  cd /usr/src
+  tar xjvf upx-<VER>-<REL>-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  ./upx-<VER>-<REL>.sh all
+  
+  if present, original package detached signature is automatically included but
+  to generate a package fully signed you must use:
+  SIG=1 ./upx-<VER>-<REL>.sh all
+
+Package signature checking instructions:
+  ./upx-<VER>-<REL>.sh checksig
+  it should contain Martin's Pool signature on original source
+  and my signature on the patch and on the script itself
+
+This will create:
+  /usr/src/upx-<VER>-<REL>.tar.bz2
+  /usr/src/upx-<VER>-<REL>-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro
+
+  /usr/bin/upx.exe
+  /usr/doc/Cygwin/upx-<VER>.README
+  /usr/doc/upx-1.24/LICENSE
+  /usr/doc/upx-1.24/README
+
+------------------
+
+Port Notes:
+UPX compiles OOTB (out-of-the-box), only the Makefile must be patched slightly..
+
+----- version 1.20-1 -----
+Initial release.
+
+----- version 1.21-1 -----
+Changes in 1.21 (01 Jun 2002)
+
+  * New option "--crp-ms=" for slightly better compression at the cost of
+    higher memory requirements during compression.
+    Try "upx --best --crp-ms=100000". See the docs for more info.
+  * portability fixes
+  * compile fixes for g++ 3.0 and g++ 3.1 
+
+----- version 1.24-1 -----
+Changes in 1.24 (07 Nov 2002)
+  * INFO: http://upx.sourceforge.net is the permanent UPX home page
+  * djgpp2/coff: stricter check of the COFF header to work around a
+    problem with certain binutils versions
+
+Changes in 1.23 (05 Sep 2002)
+  * atari/tos: fixed an unpacking problem where a buffer was too
+    small (introduced in 1.22)
+  * linux/386: don't give up too early if a single block turns out
+    to be incompressible
+  * documentation: added some quick tips how to achieve the best
+    compression ratio for the final release of your application
+  * fixed a rare situation where the exit code was not set correctly
+
+Changes in 1.22 (27 Jun 2002)
+  * atari/tos: the stub now flushes the CPU cache to avoid
+    problems on 68030+ machines
+  * source code: additional compiler support for Borland C++ 5.5.1,
+    Digital Mars C++ 8.28 and Watcom C++ 11.0c
+
+
+Cygwin port maintained by: Lapo Luchini <lapo@lapo.it>

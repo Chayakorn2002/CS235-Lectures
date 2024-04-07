@@ -1,0 +1,32 @@
+Name Age Gender City Occupation Salary
+John 25 Male New York Engineer 75000
+Alice 30 Female Los Angeles Doctor 95000
+Bob 22 Male Chicago Teacher 55000
+Eve 28 Female San Francisco Software Developer 80000
+Michael 40 Male Boston Lawyer 90000
+Sarah 35 Female Seattle Nurse 60000
+David 29 Male Austin Chef
+Emily 27 Female Denver Artist
+Chris 32 Male Atlanta Sales Representative
+Olivia 31 Female Miami Marketing Manager
+Daniel 26 Male Houston Accountant
+Sophia 29 Female Philadelphia Pharmacist
+William 33 Male Phoenix Financial Analyst
+Ava 34 Female San Diego Graphic Designer
+Joseph 28 Male Dallas Electrician
+Mia 27 Female Nashville Data Analyst
+Andrew 31 Male Las Vegas Carpenter
+Emma 29 Female Portland Social Worker
+Matthew 30 Male Minneapolis Psychologist
+Chloe 25 Female Detroit Writer
+Daniel 37 Male Baltimore Police Officer
+Liam 33 Male San Antonio Firefighter
+Sophia 28 Female Tampa Registered Nurse
+James 35 Male Orlando Physical Therapist
+Olivia 30 Female New Orleans Veterinarian
+Alexander 32 Male Memphis Scientist
+Amelia 26 Female Charlotte Librarian
+Benjamin 29 Male Raleigh Web Developer
+Isabella 30 Female Cincinnati Architect
+Michael 28 Male Columbus Musician
+Ella 27 Female Indianapolis Photographer

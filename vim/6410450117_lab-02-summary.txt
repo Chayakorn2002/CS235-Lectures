@@ -1,0 +1,50 @@
+Lab 02 Summary 
+
+1) All commands's tutorial
+	- moving cursor : h, j, k, l
+	- x : delete a character
+	- w, e : moving from one word to another word 
+	- cw : change word
+	- c$ : change from the current cursor to the end of the line.
+	- dd : cut the whole line
+	- d$ : cut to the end of the line
+	- dG : cut the content from the cursor to the end of the file
+	- #G : moving to the # line
+	- $ : moving the cursor to the end of the line
+	- ^ : moving the cursor to the first non-blank. In case of 0, 0 will move us to the very first of the line including space.
+	- 1G : moving to the very first line of the file
+	- / : for searching 
+	- n : (next) using for going forward to the next target while we're searching 
+	- N : opposite of n, while n is going forward, N is going to the previous target
+	- ZZ : save and quit
+	- wq : write and quit
+	- q! : force to quit
+	- v : visual mode, selecting the next and manipulate them visually
+	- V : visual line mode, in this case we're selecting the whole line
+	- ctrl + v : visual block mode, block mode allow us to select the text in rectangular block view.
+	- i : insert mode
+	- I : insert mode but we're starting in the beginning of the current line instead. 
+	- a : enter the insert mode with the cursor moving to the after of the current position
+	- A : just like "a" but the position of our cursor will be at the last character of the line
+	- o : open the new line below the current line and enter the insert mode
+	- O : open the new line above the current line and enter the insert mode
+	- p : putting the contents in our buffer to the after of our cursor position (paste)
+	- P : same as "p" but putting the contents before the cursor position instead
+	- yy : yank (copy) usually use with visual mode
+	- #yy : yanking # line, starting from the current line
+	- #dd : delete the current line and # - 1 line below
+	- :w : writing (save) the current file
+	- :sav : saving the current file to the new file (similar to save as)
+	- ctrl + b : scrolling backward (full screen)
+	- ctrl + f : scrolling forward (full screen)
+	- ctrl + d : scrolling down (half screen)
+	- ctrl + u : scrolling up (half screen)
+	- r : replacing the current character with the character you're going to type	
+	- #r : replacing the current character your cursor targeting and # - 1 more
+	- R : replace mode, this mode will allow us to replace the existing character from our current cursor throughly
+	- u : undo the action
+	- ESC : entering the normal mode
+
+2) My opinion about Vim
+
+	I think vim is really an convenient tool for me to focus with my text-based work because I like the concept of no need to move our hand around, we can place our hand in the exact position and deal with many case of editing the text with various useful command but I'm kinda get into the problem with one thing that is my "esc" is kinda far away from my hand and in vim we mainly use "esc" so it's kinda troublesome for me but I will find a way and improve my current self.

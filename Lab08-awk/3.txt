@@ -1,0 +1,6 @@
+This is a test file for UNIX.
+UNIX is a powerful operating system.
+I love working with UNIX.
+AWK is a useful tool for text processing.
+Let's filter lines with UNIX.
+
